@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
@@ -8,6 +9,7 @@ import FAQ from "../components/FAQ";
 import FooterCTA from "../components/FooterCTA";
 import ContactForm from "../components/ContactForm";
 import ScrollAnimation from "../components/ScrollAnimation";
+import Hinnakalkulaator from "../components/Hinnakalkulaator";
 
 export default function KontoriKoristus() {
   return (
@@ -64,8 +66,8 @@ export default function KontoriKoristus() {
             <div 
               className="animate-fade-up order-2 md:order-1"
               style={{ 
-                background: "rgba(34, 65, 25, 0.45)", 
-                backdropFilter: "blur(3px)",
+                background: "rgba(55, 54, 45, 0.45)", 
+                backdropFilter: "blur(5px)",
                 WebkitBackdropFilter: "blur(3px)",
                 padding: "32px",
                 borderRadius: "20px",
@@ -107,14 +109,15 @@ export default function KontoriKoristus() {
         <section className="py-[100px] bg-white">
           <div className="max-w-[1280px] mx-auto px-[5%]">
             <h2 className="section-title mb-8">
-              Kes koristab teie kontorit?
+              Kas teie kontorit koristab keegi, keda te tegelikult ei usalda?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] text-[16px] text-[#2f353f] leading-[1.8] font-light">
               <div>
-                Tallinnas tegutseb palju koristusteenuse pakkujaid, kuid ettevõtete jaoks ei ole valik ainult hinnas. Enamik firmasid, kes meie poole pöörduvad, on varasemalt juba teenusepakkujat vahetanud — põhjuseks ebastabiilne kvaliteet, kehv kommunikatsioon või puuduv vastutus.
+                <strong>Paljud ettevõtted on olukorras, kus koristaja küll käib, aga tulemus ei rahulda.</strong> Tolm koguneb kappide peale, prügikastid on hommikul endiselt täis ja WC-s lõpevad tarvikud kõige ebasobivamal hetkel. Töötajad märkavad ja kliendid samuti.
               </div>
               <div>
-                Hea teenus ei sõltu ainult koristajast. Oluline on süsteem: selge tööplaan, regulaarne kvaliteedikontroll ja kiire reageerimine olukordades, mis igapäevatöös paratamatult tekivad. SPS Grupp on aastaid keskendunud just äriklientidele. Meie töö põhineb standardiseeritud protsessidel, koolitatud meeskonnal ja digitaalsel tööde jälgimisel. See annab kindluse, et teenus toimib järjepidevalt — ka siis, kui inimesed või olukorrad muutuvad.
+                <strong>Kontori puhtus mõjutab otseselt kolme asja:</strong> töötajate produktiivsust, klientide esmamuljeid ja haigestumiste arvu. Uuringud näitavad, et puhtas kontoris on haiguspäevi vähem.<br /><br />
+                <strong>SPS Grupis läbib iga koristaja koolituse just kontorikeskkonna jaoks.</strong> Me teame, kuidas käsitleda IT-tehnikat, tundlikke dokumente ja esinduspindu nii, et te ei pea enam muretsema.
               </div>
             </div>
 </div>
@@ -123,7 +126,11 @@ export default function KontoriKoristus() {
 
         {/* Teenuse sisu - Mida sisaldab kontori koristusteenus */}
         <ScrollAnimation animation="fade-up">
-        <section className="py-[100px] bg-[#eceef1]" id="teenused">
+        <section 
+          className="py-[100px]" 
+          id="teenused"
+          style={{ background: "#d4d8e3 url('/swirl_back.svg') calc(100% + 100px) center / cover no-repeat" }}
+        >
           <div className="max-w-[1280px] mx-auto px-[5%]">
             <div className="text-center mb-14">
               <div className="section-tag">
@@ -137,21 +144,26 @@ export default function KontoriKoristus() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { text: "Põrandate igapäevane puhastus ja hooldus — kõik põrandatüübid" },
-                { text: "Tööpindade ja mööbli tolmutamine ning desinfitseerimine" },
-                { text: "Sanitaarruumide põhjalik puhastus ja tarvikute täiendamine" },
-                { text: "Prügi kogumine, sorteerimine ja uute kilekottide paigaldus" },
-                { text: "Kööginurga ja puhkeruumi hooldus (tasapinnad, mikrolaineahi, kohvimasin)" },
-                { text: "Klaaspindade, peeglite ja klaasseinte puhastus" },
-                { text: "IT-tehnika ümbruse antistaatiline puhastus" },
-                { text: "Sissepääsu ja esinduspinna erihooldus" },
-                { text: "Ukselinkide, lülitite ja sageli kasutatavate pindade desinfitseerimine" },
+                { bold: "Põrandate igapäevane puhastus ja hooldus", desc: "kõik põrandatüübid" },
+                { bold: "Tööpindade ja mööbli tolmutamine ning desinfitseerimine", desc: "" },
+                { bold: "Sanitaarruumide põhjalik puhastus", desc: "tarvikute täiendamine" },
+                { bold: "Prügi koristamine", desc: "kogumine, sorteerimine ja uute kilekottide paigaldus" },
+                { bold: "Kööginurga ja puhkeruumi hooldus", desc: "tasapinnad, mikrolaineahi, kohvimasin" },
+                { bold: "Klaaspindade puhastus", desc: "peeglid, klaasseinad" },
+                { bold: "IT-tehnika ümbruse antistaatiline puhastus", desc: "" },
+                { bold: "Sissepääsu ja esinduspinna erihooldus", desc: "" },
+                { bold: "Sageli puudutatavate pindade desinfitseerimine", desc: "ukselingid, lülitid" },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 bg-white p-5 rounded-xl">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#85cbe9" strokeWidth="2.5" className="flex-shrink-0 mt-0.5">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  <span className="text-[#2f353f] text-[15px]">{item.text}</span>
+                <div key={i} className="bg-[#ffffff78] backdrop-blur-[5px] p-5 rounded-xl transition-all duration-300 border border-transparent hover:scale-105 hover:shadow-lg hover:border-[#85cbe9] hover:bg-white/60 cursor-pointer">
+                  <div className="text-[#5a6474] text-[14px] mb-2">
+                    <span className="font-mono inline-block border-b border-[#5a6474] pb-px pr-5">
+                      {String(i + 1).padStart(2, '0')}.
+                    </span>
+                  </div>
+                  <div className="text-[#2f353f] text-[15px] leading-[1.6]">
+                    <strong className="text-[#17345a] block mb-1">{item.bold}</strong>
+                    {item.desc ? <span className="text-[#5a6474]">{item.desc}</span> : null}
+                  </div>
                 </div>
               ))}
             </div>
@@ -173,76 +185,88 @@ export default function KontoriKoristus() {
               <h2 className="section-title">Miks üle 50 kontori usaldab koristuse SPS Grupile?</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1000px] mx-auto">
-              <div className="bg-[#f8fafc] p-8 rounded-2xl">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#85cbe9] flex items-center justify-center flex-shrink-0">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2">
-                      <circle cx="12" cy="8" r="6" />
-                      <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
-                    </svg>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-center">
+              <div className="grid grid-cols-1 gap-2">
+                <div className="bg-[#f8fafc] p-4 rounded-2xl transition-all duration-300 border-2 border-transparent hover:scale-105 hover:shadow-lg hover:border-[#85cbe9] hover:bg-[#eef7fc] cursor-pointer">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2">
+                        <circle cx="12" cy="8" r="6" />
+                        <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-[18px] font-bold text-[#17345a] mb-2">20+ aastat kontorihoolduse kogemust</h3>
+                      <p className="text-[15px] text-[#5a6474] leading-[1.7]">
+                        Oleme koristanud kõiki kontoritüüpe — väikestest IT-büroodest suurte peakontorite ja ministeeriumideni. Teame, mis töötab ja mis mitte.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-[18px] font-bold text-[#17345a] mb-2">20+ aastat kontorihoolduse kogemust</h3>
-                    <p className="text-[15px] text-[#5a6474] leading-[1.7]">
-                      Oleme koristanud kõiki kontoritüüpe — väikestest IT-büroodest suurte peakontorite ja ministeeriumideni. Teame, mis töötab ja mis mitte.
-                    </p>
+                </div>
+
+                <div className="bg-[#f8fafc] p-4 rounded-2xl transition-all duration-300 border-2 border-transparent hover:scale-105 hover:shadow-lg hover:border-[#85cbe9] hover:bg-[#eef7fc] cursor-pointer">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-[18px] font-bold text-[#17345a] mb-2">Taustakontroll ja konfidentsiaalsus</h3>
+                      <p className="text-[15px] text-[#5a6474] leading-[1.7]">
+                        Iga töötaja läbib taustakontrolli ja allkirjastab konfidentsiaalsuslepingu. Teie dokumentatsioon ja tehnika on turvalistes kätes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-[#f8fafc] p-4 rounded-2xl transition-all duration-300 border-2 border-transparent hover:scale-105 hover:shadow-lg hover:border-[#85cbe9] hover:bg-[#eef7fc] cursor-pointer">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-[18px] font-bold text-[#17345a] mb-2">ISO 9001 kvaliteedijuhtimine</h3>
+                      <p className="text-[15px] text-[#5a6474] leading-[1.7]">
+                        Iga koristuskäiku kontrollib objektijuht. Kui midagi ei vasta standardile, lahendame selle enne kui märkate.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-[#f8fafc] p-4 rounded-2xl transition-all duration-300 border-2 border-transparent hover:scale-105 hover:shadow-lg hover:border-[#85cbe9] hover:bg-[#eef7fc] cursor-pointer">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="M9 12l2 2 4-4" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-[18px] font-bold text-[#17345a] mb-2">Öko puhastusvahendid</h3>
+                      <p className="text-[15px] text-[#5a6474] leading-[1.7]">
+                        Kasutame ökomärgisega sertifitseeritud tooteid, mis on ohutud inimestele ja elektroonikaseadmetele. Pakume allergiavabasid lahendusi tundlikele töötajatele.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-[#f8fafc] p-8 rounded-2xl">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#85cbe9] flex items-center justify-center flex-shrink-0">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2">
-                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-[18px] font-bold text-[#17345a] mb-2">Taustakontroll ja konfidentsiaalsus</h3>
-                    <p className="text-[15px] text-[#5a6474] leading-[1.7]">
-                      Iga töötaja läbib taustakontrolli ja allkirjastab konfidentsiaalsuslepingu. Teie dokumentatsioon ja tehnika on turvalistes kätes.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-[#f8fafc] p-8 rounded-2xl">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#85cbe9] flex items-center justify-center flex-shrink-0">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                      <polyline points="14 2 14 8 20 8" />
-                      <line x1="16" y1="13" x2="8" y2="13" />
-                      <line x1="16" y1="17" x2="8" y2="17" />
-                      <polyline points="10 9 9 9 8 9" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-[18px] font-bold text-[#17345a] mb-2">ISO 9001 kvaliteedijuhtimine</h3>
-                    <p className="text-[15px] text-[#5a6474] leading-[1.7]">
-                      Iga koristuskäiku kontrollib objektijuht. Kui midagi ei vasta standardile, lahendame selle enne kui märkate.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-[#f8fafc] p-8 rounded-2xl">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#85cbe9] flex items-center justify-center flex-shrink-0">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                      <path d="M9 12l2 2 4-4" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-[18px] font-bold text-[#17345a] mb-2">Öko puhastusvahendid</h3>
-                    <p className="text-[15px] text-[#5a6474] leading-[1.7]">
-                      Kasutame ökomärgisega sertifitseeritud tooteid, mis on ohutud inimestele ja elektroonikaseadmetele. Pakume allergiavabasid lahendusi tundlikele töötajatele.
-                    </p>
-                  </div>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/kontorikoristus2.jpg"
+                  alt="Kontori koristus"
+                  width={600}
+                  height={700}
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </div>
@@ -261,53 +285,48 @@ export default function KontoriKoristus() {
                 Hind
               </div>
               <h2 className="section-title">Millest sõltub kontori koristuse hind?</h2>
-              <p className="section-intro mx-auto mt-0 max-w-[700px]">
-                Kontori koristuse hind kujuneb nelja teguri põhjal: pindala, koristuse sagedus, töötajate arv ja eritööde vajadus.
-              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1000px] mx-auto mb-8">
-              {[
-                { size: "Väike kontor", area: "100–200m²", price: "250€", period: "kuu" },
-                { size: "Keskmine kontor", area: "200–500m²", price: "450€", period: "kuu", highlight: true },
-                { size: "Suur kontor", area: "500–1000m²", price: "800€", period: "kuu" },
-                { size: "Suur kompleks", area: "1000m²+", price: "Individuaalne", period: "pakkumine" },
-              ].map((item, i) => (
-                <div 
-                  key={i} 
-                  className={`p-8 rounded-2xl text-center transition-all duration-300 cursor-pointer ${
-                    item.highlight 
-                      ? "bg-[#17345a] text-white hover:bg-[#1e4a7a] hover:scale-105 hover:shadow-xl" 
-                      : "bg-[#f8fafc] hover:bg-[#eef7fc] hover:scale-105 hover:shadow-lg border-2 border-transparent hover:border-[#85cbe9]"
-                  }`}
-                >
-                  <div className={`text-[18px] font-bold mb-2 ${item.highlight ? "text-white" : "text-[#17345a]"}`}>{item.size}</div>
-                  <div className={`text-[32px] font-bold mb-1 ${item.highlight ? "text-white" : "text-[#17345a]"}`}>
-                    {item.price}
-                  </div>
-                  <div className={`text-[14px] mb-4 ${item.highlight ? "text-white/70" : "text-[#8896a6]"}`}>
-                    {item.period}
-                  </div>
-                  <div className={`text-[14px] ${item.highlight ? "text-white/70" : "text-[#5a6474]"}`}>
-                    {item.area}
-                  </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-start">
+              <div>
+                <p className="text-[16px] text-[#2f353f] leading-[1.75] mb-8 font-light">
+                  Kontori koristuse hind kujuneb nelja teguri põhjal: pindala, koristuse sagedus, töötajate arv ja eritööde vajadus.
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {[
+                    { size: "Keskmine kontor", area: "800–1500m²", price: "450€", period: "kuu", highlight: true },
+                    { size: "Suur kontor", area: "4000–5000m²", price: "800€", period: "kuu" },
+                    { size: "Suur kompleks", area: "10 000m²+", price: "Individuaalne", period: "pakkumine" },
+                  ].map((item, i) => (
+                    <div 
+                      key={i} 
+                      className={`p-4 rounded-2xl text-center transition-all duration-300 cursor-pointer ${
+                        item.highlight 
+                          ? "bg-[#17345a] text-white hover:bg-[#1e4a7a] hover:scale-105 hover:shadow-xl" 
+                          : "bg-[#f8fafc] hover:bg-[#eef7fc] hover:scale-105 hover:shadow-lg border-2 border-transparent hover:border-[#85cbe9]"
+                      }`}
+                    >
+                      <div className={`text-[14px] font-bold mb-1 ${item.highlight ? "text-white" : "text-[#17345a]"}`}>{item.size}</div>
+                      <div className={`text-[26px] font-bold mb-1 ${item.highlight ? "text-white" : "text-[#17345a]"}`}>
+                        {item.price}
+                      </div>
+                      <div className={`text-[12px] mb-2 ${item.highlight ? "text-white/70" : "text-[#8896a6]"}`}>
+                        {item.period}
+                      </div>
+                      <div className={`text-[12px] ${item.highlight ? "text-white/70" : "text-[#5a6474]"}`}>
+                        {item.area}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
 
-            <p className="text-center text-[15px] text-[#5a6474] mb-6">
-              Regulaarne hoolduskoristus algab hinnast <strong>1.2€/m²</strong>, suurpuhastus <strong>1.5€/m²</strong>
-            </p>
-            <p className="text-center text-[14px] text-[#8896a6] mb-8">
-              Hinda mõjutavad: pindala, koristuse sagedus (2–5x nädalas), eritööde vajadus (aknad, vaibad, põrandad) ja töötajate arv.
-            </p>
-            <div className="text-center">
-              <Link
-                href="#pakkumine"
-                className="btn-primary"
-              >
-                Küsige täpset pakkumist oma kontorile →
-              </Link>
+                <p className="text-[14px] text-[#5a6474]">
+                  Regulaarne hoolduskoristus algab <strong>1.2€/m²</strong>, suurpuhastus <strong>1.5€/m²</strong>
+                </p>
+              </div>
+
+              <Hinnakalkulaator />
             </div>
           </div>
         </section>

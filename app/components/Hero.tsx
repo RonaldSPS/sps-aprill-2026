@@ -74,9 +74,9 @@ export default function Hero() {
         <div 
           className="animate-fade-up order-2 md:order-1"
           style={{ 
-            background: "rgba(23, 52, 90, 0.42)", 
-            backdropFilter: "blur(3px)",
-            WebkitBackdropFilter: "blur(3px)",
+            background: "rgba(38, 42, 45, 0.42)", 
+            backdropFilter: "blur(5px)",
+            WebkitBackdropFilter: "blur(5px)",
             padding: "32px",
             borderRadius: "20px",
             border: "1px solid rgba(133, 203, 233, 0.2)"
