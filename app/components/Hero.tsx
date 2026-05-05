@@ -88,7 +88,7 @@ export default function Hero() {
           </h1>
           <p className="text-[16px] md:text-[17px] text-white/90 leading-[1.75] mb-[30px] max-w-[500px] font-light">
             Hooldame igakuiselt üle <strong className="text-white font-medium">500 000m²</strong>{" "}
-            kontori-, kaubandus- ja tootmispinda Harjumaal. ISO sertifitseeritud.
+            kontori-, kaubandus- ja tootmispindu Harjumaal. ISO sertifitseeritud.
           </p>
           <div className="flex gap-[10px] mb-[24px] animate-fade-up">
             <Link

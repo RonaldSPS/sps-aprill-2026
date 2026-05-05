@@ -76,7 +76,7 @@ export default function KontoriKoristus() {
                 Kontori koristus<br />
                 <span className="text-[#85cbe9]">Tallinnas ja Harjumaal</span>
               </h1>
-              <p className="text-[16px] md:text-[17px] text-white/90 leading-[1.75] mb-[30px] max-w-[500px] font-light">
+              <p className="text-[15px] text-white/90 leading-[1.75] mb-[30px] max-w-[500px] font-light">
                 Regulaarne kontorikoristus alates <strong className="text-white font-medium">1.2€/m²</strong>. 
                 Paindlik graafik, koolitatud personal ja kvaliteedikontroll iga käiguga.
               </p>
@@ -106,16 +106,16 @@ export default function KontoriKoristus() {
         <ScrollAnimation animation="fade-up">
         <section className="py-[100px] bg-white">
           <div className="max-w-[1280px] mx-auto px-[5%]">
-            <div className="max-w-[800px] mx-auto text-center">
-              <h2 className="section-title mb-6">
-                Kes koristab teie kontorit?
-              </h2>
-              <p className="text-[16px] text-[#2f353f] leading-[1.8] mb-5 font-light">
-                Kontori puhtus mõjutab otseselt kolme asja: töötajate produktiivsust, klientide esmamuljeid ja haigestumiste arvu. Uuringud näitavad, et puhtas kontoris on haiguspäevi kuni 20% vähem.
-              </p>
-              <p className="text-[16px] text-[#2f353f] leading-[1.8] font-light">
-                SPS Grupis läbib iga koristaja koolituse just kontorikeskkonna jaoks. Me teame, kuidas käsitleda IT-tehnikat, tundlikke dokumente ja esinduspindu — nii et te ei pea enam muretsema, kas koristus on tehtud õigesti.
-              </p>
+            <h2 className="section-title mb-8">
+              Kes koristab teie kontorit?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] text-[16px] text-[#2f353f] leading-[1.8] font-light">
+              <div>
+                Tallinnas tegutseb palju koristusteenuse pakkujaid, kuid ettevõtete jaoks ei ole valik ainult hinnas. Enamik firmasid, kes meie poole pöörduvad, on varasemalt juba teenusepakkujat vahetanud — põhjuseks ebastabiilne kvaliteet, kehv kommunikatsioon või puuduv vastutus.
+              </div>
+              <div>
+                Hea teenus ei sõltu ainult koristajast. Oluline on süsteem: selge tööplaan, regulaarne kvaliteedikontroll ja kiire reageerimine olukordades, mis igapäevatöös paratamatult tekivad. SPS Grupp on aastaid keskendunud just äriklientidele. Meie töö põhineb standardiseeritud protsessidel, koolitatud meeskonnal ja digitaalsel tööde jälgimisel. See annab kindluse, et teenus toimib järjepidevalt — ka siis, kui inimesed või olukorrad muutuvad.
+              </div>
             </div>
 </div>
         </section>
