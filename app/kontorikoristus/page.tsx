@@ -334,7 +334,9 @@ export default function KontoriKoristus() {
         <FAQ />
         </ScrollAnimation>
       </main>
-      <Footer />
+      <ScrollAnimation animation="fade-up" delay={800}>
+        <Footer />
+      </ScrollAnimation>
     </>
   );
 }

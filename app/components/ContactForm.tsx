@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import TwoToneHeading from "./TwoToneHeading";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -23,9 +24,7 @@ export default function ContactForm() {
         {/* Center - Form */}
         <div className="form-card">
             <div className="section-tag mx-auto w-fit">Küsi pakkumist</div>
-            <h2 className="section-title mb-6 text-center">
-              Aitame leida optimaalse lahenduse teie koristusvajadustele
-            </h2>
+            <TwoToneHeading text="Aitame leida optimaalse lahenduse teie koristusvajadustele" className="mb-6 text-center" />
             <p className="text-[14px] text-[#8896a6] mb-6 font-light text-center">
               Täitke vorm ja meie spetsialist võtab teiega ühendust 24 tunni jooksul.
             </p>

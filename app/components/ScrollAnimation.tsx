@@ -24,10 +24,6 @@ export default function ScrollAnimation({
             if (el) {
               setTimeout(() => {
                 el.classList.add("animate-" + animation);
-                // Remove animation class after it completes to allow re-trigger
-                setTimeout(() => {
-                  el.style.opacity = "1";
-                }, 700);
               }, delay);
             }
             observer.unobserve(entry.target);
@@ -47,8 +43,8 @@ export default function ScrollAnimation({
   return (
     <div
       ref={ref}
-      style={{ opacity: 0 }}
       className="scroll-animate"
+      style={{ opacity: 0, transform: 'translateY(30px)' }}
     >
       {children}
     </div>

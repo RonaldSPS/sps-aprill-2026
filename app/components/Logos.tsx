@@ -1,24 +1,59 @@
+import Image from "next/image";
+
 const logos = [
-  "RIMI", "MAXIMA", "SOKOS HOTEL VIRU", "TALTECH", "ELERING", 
-  "ERICSSON", "MYFITNESS", "TELEDYNE FLIR", "NORMA"
+  "21kool.png",
+  "abakhan.png",
+  "bestair.png",
+  "city-motors.png",
+  "decora.png",
+  "draudimas.png",
+  "eften.png",
+  "elering.png",
+  "ericsson.png",
+  "hobbyhall.png",
+  "infoauto.png",
+  "leibur.png",
+  "maxima.png",
+  "mustikas.png",
+  "mustikas2.png",
+  "myfitness.png",
+  "Nordichotels.png",
+  "norma.png",
+  "prike.png",
+  "proekspert.png",
+  "puumarket.png",
+  "ra.png",
+  "rimi.png",
+  "sokos.png",
+  "storz.png",
+  "talleks.png",
+  "taltech.png",
+  "teledyne.png",
+  "uponor.png",
+  "veho.png",
+  "zoo.png"
 ];
 
 export default function Logos() {
   return (
-    <section className="logos-section bg-white py-8 border-t border-b border-[rgba(23,52,90,0.05)]" id="kliendid">
+    <section className="logos-section bg-white border-t border-b border-[rgba(23,52,90,0.05)]" id="kliendid">
       <div className="overflow-hidden relative">
         <div 
           className="flex items-center gap-0"
-          style={{ width: "max-content", animation: "logoScroll 30s linear infinite" }}
+          style={{ width: "max-content", animation: "logoScroll 160s linear infinite" }}
         >
           {[...logos, ...logos, ...logos].map((logo, i) => (
             <div 
               key={i} 
               className="flex items-center justify-center py-2.5 px-10 opacity-40 transition-all hover:opacity-80 min-w-[160px]"
             >
-              <span className="text-[14px] font-bold text-[#17345a] tracking-[1px] whitespace-nowrap">
-                {logo}
-              </span>
+              <Image
+                src={`/logod/${logo}`}
+                alt={logo.replace(".png", "")}
+                width={90}
+                height={50}
+                className="object-contain"
+              />
             </div>
           ))}
         </div>

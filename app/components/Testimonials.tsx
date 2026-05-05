@@ -1,23 +1,24 @@
 import Link from "next/link";
+import TwoToneHeading from "./TwoToneHeading";
 
 const testimonials = [
   {
-    quote: "Kõige suurem muutus oli see, et ma ei pea ise koristuse pärast enam muretsema. Enne oli alati midagi valesti — nüüd toimib teenus märkamatult.",
-    author: "Kinnisvarahaldur",
+    quote: "Oleme väga rahul, kuidas meil toimetab tänane koristaja SPS'ist ja loodame, et ta jätkab oma tööd sama hästi.",
+    author: "Teledyne Flir",
     location: "Tallinn",
-    initials: "K",
+    initials: "TF",
   },
   {
-    quote: "Võrreldes eelmiste teenusepakkujatega nagu öö ja päev! Viisakad ja positiivsed. WC-s on nüüd ka alati kõik tarvikud olemas.",
+    quote: "Tahame kiita puhastusteenindajat. Võrreldes eelmiste teenusepakkujatega nagu öö ja päev! Viisakad & positiivsed. Ning WC-s on ka nüüd alati kõik tarvikud olemas.",
     author: "Maiki Nautras",
     location: "General Services Specialist, AS Norma",
     initials: "M",
   },
   {
-    quote: "Meil on mitu asukohta ja SPS Grupp toimetab kõigis nendes ühtviisi hästi. See on haruldane. Täname järjepideva teenuse eest!",
-    author: "Hooldusjuht",
-    location: "Kinnisvarafirmade kett",
-    initials: "H",
+    quote: "Tahame kiita puhastusteenindajat. Võrreldes eelmiste teenusepakkujatega nagu öö ja päev! Viisakad & positiivsed. Ning WC-s on ka nüüd alati kõik tarvikud olemas.",
+    author: "Norma",
+    location: "",
+    initials: "N",
   },
 ];
 
@@ -32,7 +33,7 @@ export default function Testimonials() {
             </svg>
             Klientide tagasiside
           </div>
-          <h2 className="section-title">Mida ütlevad meie kliendid</h2>
+          <TwoToneHeading text="Mida ütlevad meie kliendid" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -60,6 +61,19 @@ export default function Testimonials() {
               </Link>
             </div>
           ))}
+        </div>
+
+        {/* Video section */}
+        <div className="mt-16 w-full md:w-3/4 mx-auto">
+          <div className="rounded-3xl overflow-hidden shadow-lg">
+            <video
+              src="/SPS-TarmoSildberg.mp4"
+              controls
+              poster="/TarmoHero.jpg"
+              className="w-full h-auto"
+              style={{ borderRadius: "24px" }}
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import TwoToneHeading from "./TwoToneHeading";
 
 // Fallback gradients in case images don't load
 const fallbackGradients = [
@@ -96,7 +97,7 @@ export default function Industries() {
             </svg>
             Valdkonnad
           </div>
-          <h2 className="section-title">Valdkonnad, mida teenindame</h2>
+          <TwoToneHeading text="Valdkonnad, mida teenindame" />
           <p className="section-intro mx-auto mt-0">
             Teenindame laias valikus tööstus- ja ärihooneid koos kvaliteedikontrolliga.
           </p>

@@ -14,7 +14,7 @@ const megaMenuData = {
     {
       title: "Regulaarne koristusteenus",
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#85cbe9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           <path d="M9 22V12h6v10" />
         </svg>
@@ -28,7 +28,7 @@ const megaMenuData = {
     {
       title: "Sisepuhastus",
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#85cbe9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           <path d="M9 22V12h6v10" />
         </svg>
@@ -103,6 +103,39 @@ export default function Footer() {
                 style={{ width: "auto", height: "38px" }}
               />
             </Link>
+
+            {/* Anti-bot protected contact info */}
+            <div className="mt-4 space-y-1">
+              <a
+                href={"https://www.google.com/maps/place/Tetris+B%C3%BCroohoone,+Mustam%C3%A4e+tee+46,+10621+Tallinn/@59.4162971,24.6890432,17z/data=!3m1!4b1!4m6!3m5!1s0x469294f5fec8e2fd:0xc2b28e6f780f9897!8m2!3d59.4162944!4d24.6916181!16s%2Fg%2F1q6jyqwpb?entry=tts&g_ep=EgoyMDI1MDIyMy4xIPu8ASoASAFQAw%3D%3D"}
+                className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9] block"
+                rel="nofollow"
+              >
+                {"MUSTAMÄE TEE 46, 10621 TALLINN"}
+              </a>
+              <a
+                href={`tel:${["+", "3", "7", "2", " ", "5", "5", "6", "0", " ", "5", "1", "4", "7"].join("")}`}
+                className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9] block"
+                rel="nofollow"
+              >
+                {["+372", " ", "5560", " ", "5147"].join("")}
+              </a>
+              <a
+                href={`tel:${["+", "3", "7", "2", " ", "6", "6", "2", " ", "3", "3", "2", "8"].join("")}`}
+                className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9] block"
+                rel="nofollow"
+              >
+                {["+372", " ", "662", " ", "3328"].join("")}
+              </a>
+              <a
+                href={`mailto:${["i", "n", "f", "o", "@", "s", "p", "s", "g", "r", "u", "p", "p", ".", "e", "e"].join("")}`}
+                className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9] block"
+                rel="nofollow"
+              >
+                {["info", "@", "spsgrupp", ".ee"].join("")}
+              </a>
+            </div>
+
             <ul className="flex flex-col gap-1 list-none mt-4 mb-6">
               {navLinks.slice(1).map((link) => (
                 <li key={link.href}>
@@ -113,15 +146,17 @@ export default function Footer() {
               ))}
             </ul>
 
-            {/* Contact info */}
-            <h4 className="text-[#85cbe9] text-[12px] font-medium uppercase tracking-[1px] mb-3">
-              Kontakt
-            </h4>
-            <ul className="flex flex-col gap-1 list-none">
-              <li><Link href="tel:6623328" className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9]">662 3328</Link></li>
-              <li><Link href="mailto:info@spsgrupp.ee" className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9]">info@spsgrupp.ee</Link></li>
-              <li><Link href="#pakkumine" className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9]">Küsi pakkumist</Link></li>
-            </ul>
+            {/* Facebook link */}
+            <a
+              href="https://www.facebook.com/Puhastusteenused"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-[#85cbe9] transition-colors no-underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#85cbe9]">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
           </div>
 
           {/* Column 2: Teenused with mega menu */}
@@ -143,6 +178,15 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <a href="https://taust.ee/app/report/sps-grupp-ou-11394806" className="block mt-4 no-underline" rel="nofollow">
+              <Image
+                src="/Hasti-juhitud-ettevote.webp"
+                alt="Hästi juhitud ettevõte"
+                width={120}
+                height={120}
+                style={{ width: "auto", height: "auto" }}
+              />
+            </a>
           </div>
 
           {/* Column 3: Sisepuhastus */}

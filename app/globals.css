@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Chillax Font Face */
+@font-face {
+  font-family: 'Chillax';
+  src: url('/Font/Chillax-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('/Font/Chillax-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer utilities {
   .text-custom-gray {
     color: #2f353f;
@@ -78,6 +95,30 @@ body {
 
 .animate-float {
   animation: float 5s ease-in-out infinite;
+}
+
+/* Scroll animation base state - elements start hidden */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-animate.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-animate.animate-fade-in {
+  opacity: 1;
+}
+
+.scroll-animate.animate-slide-left {
+  transform: translateX(0);
+}
+
+.scroll-animate.animate-slide-right {
+  transform: translateX(0);
 }
 
 @keyframes slideInLeft {
@@ -340,9 +381,14 @@ body {
 }
 
 .section-title {
-  font-size: clamp(26px, 3.2vw, 40px);
-  font-weight: 700; letter-spacing: -0.5px;
-  color: var(--navy); line-height: 1.18;
+  font-size: clamp(26px, 3.2vw, 50px);
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: var(--navy);
+}
+
+.section-title span {
+  font-family: 'Chillax', system-ui, sans-serif;
 }
 
 .section-intro {
@@ -366,6 +412,20 @@ body {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
   border-color: rgba(133,203,233,0.35);
+}
+
+.service-column-card {
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 32px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.service-column-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(133,203,233,0.3);
 }
 
 .service-icon-badge {

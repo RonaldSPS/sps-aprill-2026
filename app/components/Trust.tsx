@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TwoToneHeading from "./TwoToneHeading";
 
 const trustBadges = [
   {
@@ -84,9 +85,7 @@ export default function Trust() {
           {/* Left - Text */}
           <div>
             <div className="section-tag">Kvaliteedi garantii</div>
-            <h2 className="section-title mb-4">
-              Miks usaldavad meid 500+ ettevõtet?
-            </h2>
+            <TwoToneHeading text="Miks usaldavad meid 500+ ettevõtet?" />
             <p className="text-[16px] text-[#2f353f] leading-[1.8] mb-7 font-light">
               SPS Grupp on pakkunud puhastusteenuseid Eesti ettevõttetele üle 20 aasta. Meie 
               eesmärk on pakkuda koristusteenust, mis lähtub iga ettevõtte vajadustest personaalselt. 

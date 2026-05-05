@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import TwoToneHeading from "./TwoToneHeading";
 
 const faqItems = [
   {
@@ -34,7 +35,7 @@ export default function FAQ() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
           {/* Sidebar */}
           <div>
-            <h2 className="section-title mb-3.5">KKK</h2>
+            <TwoToneHeading text="KKK" />
             <p className="text-[15px] text-[#2f353f] leading-[1.7] mb-6 font-light">
               Vastame kõige levinumatele küsimustele koristusteenuse kohta. Kui teil tekib küsimusi, palun võtke meiega ühendust.
             </p>

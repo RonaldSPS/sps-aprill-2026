@@ -82,9 +82,9 @@ export default function Hero() {
             border: "1px solid rgba(133, 203, 233, 0.2)"
           }}
         >
-          <h1 className="text-[clamp(28px,4.2vw,56px)] font-bold text-white leading-[1.12] -tracking-[1px] mb-[18px]">
+          <h1 className="text-[clamp(28px,4.2vw,56px)] leading-[1.12] -tracking-[1px] mb-[18px]" style={{ fontFamily: 'Chillax', fontWeight: 400, color: 'white' }}>
             Koristusfirma<br />
-            <span className="text-[#85cbe9]">ärikliendile</span>
+            <span className="text-[#85cbe9]" style={{ fontWeight: 600 }}>ärikliendile</span>
           </h1>
           <p className="text-[16px] md:text-[17px] text-white/90 leading-[1.75] mb-[30px] max-w-[500px] font-light">
             Hooldame igakuiselt üle <strong className="text-white font-medium">500 000m²</strong>{" "}

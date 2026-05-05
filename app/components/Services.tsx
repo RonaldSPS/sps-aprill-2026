@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import TwoToneHeading from "./TwoToneHeading";
 
 const services = [
   {
@@ -42,6 +46,8 @@ const services = [
 ];
 
 export default function Services() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section className="services-section py-[100px] bg-white" id="teenused">
       <div className="max-w-[1280px] mx-auto px-[5%]">
@@ -54,148 +60,167 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Service cards - 3 columns with images */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {services.map((service, i) => (
-            <div
-              key={i}
-              className="service-card group"
-              style={{ transitionDelay: `${i * 0.1}s` }}
-            >
-              {/* Service image */}
-              <div className="w-full h-[200px] relative overflow-hidden">
-                <Image 
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-7 pt-6">
-                <div 
-                  className="service-icon-badge -mt-11 relative z-10 mb-4"
-                  style={{ boxShadow: "0 2px 12px rgba(23,52,90,0.07)" }}
-                >
-                  <span className="w-[26px] h-[26px]">{service.icon}</span>
-                </div>
-                <h3 className="text-[19px] font-bold text-[#17345a] mb-2.5">
-                  {service.title}
-                </h3>
-                <p className="text-[14px] text-[#2f353f] leading-[1.7] mb-5 font-light">
-                  {service.text}
+        {/* Introduction with expandable text */}
+        <div className="mb-12 max-w-[800px] mx-auto">
+          <TwoToneHeading text="Miks Eesti suurettevõtted valivad SPS Grupi koristusfirmaks?" />
+          <div className="text-[16px] text-[#333a46] leading-[1.8]">
+            <p className="mb-4">
+              Koristusteenuse pakkuja valikul ei ole küsimus ainult hinnas. Enamik firmasid, kes meie poole pöörduvad, on varasemalt juba teenusepakkujat vahetanud
+            </p>
+            
+            {expanded && (
+              <>
+                <p className="mb-4">
+                  — põhjuseks ebastabiilne kvaliteet, kehv kommunikatsioon või puuduv vastutus.
                 </p>
-                <Link 
-                  href="#pakkumine" 
-                  className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[14px] font-medium no-underline transition-all hover:text-[#17345a] hover:gap-2.5"
-                >
-                  Vaata lähemalt →
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          ))}
+                <p className="mb-4">
+                  Hea teenus ei sõltu ainult koristajast. Oluline on süsteem: selge tööplaan, regulaarne kvaliteedikontroll ja kiire reageerimine olukordades, mis igapäevatöös paratamatult tekivad.
+                </p>
+                <p className="mb-4">
+                  SPS Grupp on aastaid keskendunud just äriklientidele. Meie töö põhineb standardiseeritud protsessidel, koolitatud meeskonnal ja digitaalsel tööde jälgimisel. See annab kindluse, et teenus toimib järjepidevalt — ka siis, kui inimesed või olukorrad muutuvad.
+                </p>
+                <p>
+                  Kui otsite partnerit, kes võtab koristuse teie jaoks päriselt "laualt ära", tasub alustada vajaduste kaardistamisest ja läbipaistvast pakkumisest.
+                </p>
+              </>
+            )}
+          </div>
+          
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="mt-6 inline-flex items-center gap-2 text-[#5ab5da] text-[14px] font-medium no-underline hover:text-[#17345a] transition-colors"
+          >
+            {expanded ? (
+              <>
+                Näita vähem
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <polyline points="18 15 12 9 6 15" />
+                </svg>
+              </>
+            ) : (
+              <>
+                Loe lisaks
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </>
+            )}
+          </button>
         </div>
 
-        {/* Text blocks after columns */}
-        <div className="border-t border-[#e5e7eb] pt-12">
-          {/* Introduction */}
-          <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#17345a] mb-4">
-              Pakume terviklahendust äripindade hoolduseks
-            </h2>
-            <p className="text-[16px] text-[#5a6474] leading-[1.8] max-w-[700px] mx-auto">
-              Alates igapäevasest koristusest kuni eritööde ja välikoristuseni. Enamik kliente koondab kõik teenused ühe lepingu alla, et säästa aega ja lihtsustada haldust.
+        {/* Three columns with images */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Column 1: Regulaarne koristusteenus */}
+          <div className="service-column-card" style={{ transitionDelay: `${0 * 0.1}s` }}>
+            <div className="w-full h-[180px] relative overflow-hidden rounded-xl mb-6">
+              <Image 
+                src={services[0].image}
+                alt={services[0].title}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="mb-4">
+              <span className="w-[26px] h-[26px] inline-flex items-center justify-center">{services[0].icon}</span>
+            </div>
+            <h3 className="text-[18px] font-bold text-[#17345a] mb-3">
+              {services[0].title}
+            </h3>
+            <p className="text-[14px] text-[#333a46] leading-[1.7] mb-5 font-light">
+              Igapäevane ja perioodiline hooldus, mis hoiab teie tööruumid pidevalt puhtad ja esinduslikud.
             </p>
-          </div>
-
-          {/* Three columns below */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Column 1: Regulaarne koristusteenus */}
-            <div className="bg-[#f8fafc] p-8 rounded-2xl">
-              <h3 className="text-[18px] font-bold text-[#17345a] mb-3">
-                Regulaarne koristusteenus
-              </h3>
-              <p className="text-[14px] text-[#5a6474] leading-[1.7] mb-5 font-light">
-                Igapäevane ja perioodiline hooldus, mis hoiab teie tööruumid pidevalt puhtad ja esinduslikud.
-              </p>
-              <ul className="text-[14px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
-                <li>• kontorite, kaubanduspindade ja tootmishoonete hooldus</li>
-                <li>• põrandate ja tööpindade puhastus</li>
-                <li>• sanitaarruumide korrashoid</li>
-                <li>• köögid, prügikäitlus ja tarvikute haldus</li>
-                <li>• klaaspinnad ja IT-seadmete puhastus</li>
-              </ul>
-              <div className="bg-[#e8f5e9] p-4 rounded-xl mb-5">
-                <p className="text-[13px] text-[#2d7a4f] font-medium">
-                  ✦ Kõik vahendid ja tarvikud on hinna sees — eraldi haldamist ei ole vaja.
-                </p>
-              </div>
-              <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[14px] font-medium no-underline">
-                Vaata lähemalt →
-              </Link>
-            </div>
-
-            {/* Column 2: Puhastusteenused ja eritööd */}
-            <div className="bg-[#f8fafc] p-8 rounded-2xl">
-              <h3 className="text-[18px] font-bold text-[#17345a] mb-3">
-                Puhastusteenused ja eritööd
-              </h3>
-              <p className="text-[14px] text-[#5a6474] leading-[1.7] mb-5 font-light">
-                Perioodilised ja spetsiifilised tööd, mis taastavad pindade seisukorra ja pikendavad nende eluiga.
-              </p>
-              <ul className="text-[14px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
-                <li>• akende pesu (seest ja väljast)</li>
-                <li>• vaipade ja tekstiilide keemiline puhastus</li>
-                <li>• põrandate süvahooldus ja vahatamine</li>
-                <li>• ehitusjärgne koristus</li>
-                <li>• desinfitseerimine ja eripuhastused</li>
-              </ul>
-              <div className="bg-[#e8f5e9] p-4 rounded-xl mb-5">
-                <p className="text-[13px] text-[#2d7a4f] font-medium">
-                  ✦ Kiirreageerimine 24/7 ootamatute olukordade jaoks.
-                </p>
-              </div>
-              <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[14px] font-medium no-underline">
-                Vaata lähemalt →
-              </Link>
-            </div>
-
-            {/* Column 3: Välikoristus ja territooriumi hooldus */}
-            <div className="bg-[#f8fafc] p-8 rounded-2xl">
-              <h3 className="text-[18px] font-bold text-[#17345a] mb-3">
-                Välikoristus ja territooriumi hooldus
-              </h3>
-              <p className="text-[14px] text-[#5a6474] leading-[1.7] mb-5 font-light">
-                Hooldame teie hoone ümbrust aastaringselt, igal hooajal oma plaaniga.
-              </p>
-              <ul className="text-[14px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
-                <li>• fassaadi- ja aknapesu (sh kõrghooned)</li>
-                <li>• tänavakivide pesu ja hooldus</li>
-                <li>• graffiti eemaldamine</li>
-                <li>• lume- ja jäätõrje</li>
-                <li>• lehekoristus ja hooajalised tööd</li>
-              </ul>
-              <div className="bg-[#e8f5e9] p-4 rounded-xl mb-5">
-                <p className="text-[13px] text-[#2d7a4f] font-medium">
-                  ✦ Üks leping, mis katab kõik hooajad ja vajadused.
-                </p>
-              </div>
-              <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[14px] font-medium no-underline">
-                Vaata lähemalt →
-              </Link>
-            </div>
-          </div>
-
-          {/* Bottom text */}
-          <div className="mt-12 text-center">
-            <p className="text-[15px] text-[#5a6474] leading-[1.8] max-w-[600px] mx-auto">
-              Paljud meie kliendid kasutavad kõiki teenuseid koos, sest see tähendab ühte kontaktpunkti, selget vastutust ja vähem koordineerimist. Nii toimib kogu kinnisvarahooldus ühe süsteemina, mitte eraldiseisvate teenustena.
+            <ul className="text-[14px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
+              <li>• kontorite, kaubanduspindade ja tootmishoonete hooldus</li>
+              <li>• põrandate ja tööpindade puhastus</li>
+              <li>• sanitaarruumide korrashoid</li>
+              <li>• köögid, prügikäitlus ja tarvikute haldus</li>
+              <li>• klaaspinnad ja IT-seadmete puhastus</li>
+            </ul>
+            <p className="text-[14px] text-[#2d7a4f] font-medium mb-4">
+              Kõik vahendid ja tarvikud on hinna sees.
             </p>
+            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[14px] font-medium no-underline">
+              Vaata lähemalt →
+            </Link>
           </div>
+
+          {/* Column 2: Puhastusteenused ja eritööd */}
+          <div className="service-column-card" style={{ transitionDelay: `${1 * 0.1}s` }}>
+            <div className="w-full h-[180px] relative overflow-hidden rounded-xl mb-6">
+              <Image 
+                src={services[1].image}
+                alt={services[1].title}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="mb-4">
+              <span className="w-[26px] h-[26px] inline-flex items-center justify-center">{services[1].icon}</span>
+            </div>
+            <h3 className="text-[18px] font-bold text-[#17345a] mb-3">
+              {services[1].title}
+            </h3>
+            <p className="text-[14px] text-[#333a46] leading-[1.7] mb-5 font-light">
+              Perioodilised ja spetsiifilised tööd, mis taastavad pindade seisukorra ja pikendavad nende eluiga.
+            </p>
+            <ul className="text-[14px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
+              <li>• akende pesu (seest ja väljast)</li>
+              <li>• vaipade ja tekstiilide keemiline puhastus</li>
+              <li>• põrandate süvahooldus ja vahatamine</li>
+              <li>• ehitusjärgne koristus</li>
+              <li>• desinfitseerimine ja eripuhastused</li>
+            </ul>
+            <p className="text-[14px] text-[#2d7a4f] font-medium mb-4">
+              Kiirreageerimine 24/7 ootamatute olukordade jaoks.
+            </p>
+            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[14px] font-medium no-underline">
+              Vaata lähemalt →
+            </Link>
+          </div>
+
+          {/* Column 3: Välikoristus ja territooriumi hooldus */}
+          <div className="service-column-card" style={{ transitionDelay: `${2 * 0.1}s` }}>
+            <div className="w-full h-[180px] relative overflow-hidden rounded-xl mb-6">
+              <Image 
+                src={services[2].image}
+                alt={services[2].title}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="mb-4">
+              <span className="w-[26px] h-[26px] inline-flex items-center justify-center">{services[2].icon}</span>
+            </div>
+            <h3 className="text-[18px] font-bold text-[#17345a] mb-3">
+              {services[2].title}
+            </h3>
+            <p className="text-[14px] text-[#333a46] leading-[1.7] mb-5 font-light">
+              Hooldame teie hoone ümbrust aastaringselt, igal hooajal oma plaaniga.
+            </p>
+            <ul className="text-[14px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
+              <li>• fassaadi- ja aknapesu (sh kõrghooned)</li>
+              <li>• tänavakivide pesu ja hooldus</li>
+              <li>• graffiti eemaldamine</li>
+              <li>• lume- ja jäätõrje</li>
+              <li>• lehekoristus ja hooajalised tööd</li>
+            </ul>
+            <p className="text-[14px] text-[#2d7a4f] font-medium mb-4">
+              Üks leping, mis katab kõik hooajad ja vajadused.
+            </p>
+            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[14px] font-medium no-underline">
+              Vaata lähemalt →
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom text */}
+        <div className="mt-12 text-center">
+          <p className="text-[15px] text-[#333a46] leading-[1.8] max-w-[600px] mx-auto">
+            Paljud meie kliendid kasutavad kõiki teenuseid koos, sest see tähendab selget vastutust ja vähem koordineerimist. Nii toimib kogu kinnisvarahooldus ühe süsteemina, mitte eraldiseisvate teenustena.
+          </p>
         </div>
       </div>
     </section>
