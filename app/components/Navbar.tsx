@@ -150,18 +150,18 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="text-[#17345a] text-[14px] font-medium transition-all hover:text-[#17345a] cursor-pointer bg-transparent border-none flex items-center h-full py-0 no-underline"
+                  className="text-[#17345a] text-[15px] font-medium transition-all hover:text-[#17345a] cursor-pointer bg-transparent border-none flex items-center h-full py-0 no-underline"
                 >
                   {link.label}
                 </Link>
                 <div 
-                  className={`mega-menu w-[1100px] bg-white rounded-b-[16px] shadow-lg border border-[rgba(23,52,90,0.08)] p-6 grid grid-cols-4 gap-8 transition-opacity duration-200 ${megaMenuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"}`}
+                  className={`mega-menu max-w-[1100px] w-[95vw] bg-white rounded-b-[16px] shadow-lg border border-[rgba(23,52,90,0.08)] p-6 grid grid-cols-4 gap-8 transition-opacity duration-200 ${megaMenuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"}`}
                   onMouseEnter={() => setMegaMenuOpen(true)}
                   onMouseLeave={() => setMegaMenuOpen(false)}
                 >
                     {megaMenuData.columns.map((col, colIdx) => (
                       <div key={colIdx}>
-                        <div className="text-[14px] font-bold text-[#17345a] mb-3 flex items-center gap-2">
+                        <div className="text-[15px] font-bold text-[#17345a] mb-3 flex items-center gap-2">
                           {col.icon && <span className="w-5 h-5">{col.icon}</span>}
                           {col.title}
                         </div>
@@ -169,7 +169,7 @@ export default function Navbar() {
 <ul className="flex flex-col gap-1">
                             {col.items.map((item, itemIdx) => (
                               <li key={itemIdx}>
-                                <Link href={item.href} className="text-[13px] text-[#2f353f] hover:text-[#17345a] no-underline">
+                                <Link href={item.href} className="text-[15px] text-[#2f353f] hover:text-[#17345a] no-underline">
                                   {item.label}
                                 </Link>
                               </li>
@@ -183,7 +183,7 @@ export default function Navbar() {
             ) : (
               <Link
                 href={link.href}
-                className="text-[#17345a] no-underline text-[14px] font-medium transition-all hover:text-[#17345a] relative"
+                className="text-[#17345a] no-underline text-[15px] font-medium transition-all hover:text-[#17345a] relative"
               >
                 {link.label}
               </Link>
@@ -211,7 +211,7 @@ export default function Navbar() {
         <li>
           <Link
             href="#pakkumine"
-            className="bg-[#17345a] text-white no-underline py-2 px-5 rounded-lg text-[14px] font-medium transition-all hover:bg-[#1e4a7a] hover:-translate-y-0.5"
+            className="bg-[#17345a] text-white no-underline py-2 px-5 rounded-lg text-[15px] font-medium transition-all hover:bg-[#1e4a7a] hover:-translate-y-0.5"
             style={{ boxShadow: "0 2px 12px rgba(23,52,90,0.07)" }}
           >
             Küsi pakkumist

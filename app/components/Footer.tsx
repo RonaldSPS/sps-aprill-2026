@@ -119,28 +119,28 @@ export default function Footer() {
             <div className="mt-4 space-y-1">
               <a
                 href={"https://www.google.com/maps/place/Tetris+B%C3%BCroohoone,+Mustam%C3%A4e+tee+46,+10621+Tallinn/@59.4162971,24.6890432,17z/data=!3m1!4b1!4m6!3m5!1s0x469294f5fec8e2fd:0xc2b28e6f780f9897!8m2!3d59.4162944!4d24.6916181!16s%2Fg%2F1q6jyqwpb?entry=tts&g_ep=EgoyMDI1MDIyMy4xIPu8ASoASAFQAw%3D%3D"}
-                className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9] block"
+                className="text-white/65 text-[15px] no-underline hover:text-[#85cbe9] block"
                 rel="nofollow"
               >
                 {"MUSTAMÄE TEE 46, 10621 TALLINN"}
               </a>
               <a
                 href={`tel:${["+", "3", "7", "2", " ", "5", "5", "6", "0", " ", "5", "1", "4", "7"].join("")}`}
-                className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9] block"
+                className="text-white/65 text-[15px] no-underline hover:text-[#85cbe9] block"
                 rel="nofollow"
               >
                 {["+372", " ", "5560", " ", "5147"].join("")}
               </a>
               <a
                 href={`tel:${["+", "3", "7", "2", " ", "6", "6", "2", " ", "3", "3", "2", "8"].join("")}`}
-                className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9] block"
+                className="text-white/65 text-[15px] no-underline hover:text-[#85cbe9] block"
                 rel="nofollow"
               >
                 {["+372", " ", "662", " ", "3328"].join("")}
               </a>
               <a
                 href={`mailto:${["i", "n", "f", "o", "@", "s", "p", "s", "g", "r", "u", "p", "p", ".", "e", "e"].join("")}`}
-                className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9] block"
+                className="text-white/65 text-[15px] no-underline hover:text-[#85cbe9] block"
                 rel="nofollow"
               >
                 {["info", "@", "spsgrupp", ".ee"].join("")}
@@ -150,7 +150,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-1 list-none mt-4 mb-6">
               {navLinks.slice(1).map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9]">
+                  <Link href={link.href} className="text-white/65 text-[15px] no-underline hover:text-[#85cbe9]">
                     {link.label}
                   </Link>
                 </li>
@@ -173,7 +173,7 @@ export default function Footer() {
 
           {/* Column 2: Teenused with mega menu */}
           <div>
-            <h2 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
+            <h2 className="text-white text-[15px] font-bold mb-3 flex items-center gap-2">
               {megaMenuData.columns[0].icon && (
                 <span className="w-5 h-5 text-[#85cbe9]">
                   {megaMenuData.columns[0].icon}
@@ -184,7 +184,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[0].items.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.href} className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9]">
+                  <Link href={item.href} className="text-white/65 text-[15px] no-underline hover:text-[#85cbe9]">
                     {item.label}
                   </Link>
                 </li>
@@ -203,7 +203,7 @@ export default function Footer() {
 
           {/* Column 3: Eripuhastustööd */}
           <div>
-            <h2 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
+            <h2 className="text-white text-[15px] font-bold mb-3 flex items-center gap-2">
               {megaMenuData.columns[1].icon && (
                 <span className="w-5 h-5 text-[#85cbe9]">
                   {megaMenuData.columns[1].icon}
@@ -214,7 +214,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[1].items.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.href} className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9]">
+                  <Link href={item.href} className="text-white/65 text-[15px] no-underline hover:text-[#85cbe9]">
                     {item.label}
                   </Link>
                 </li>
@@ -224,7 +224,7 @@ export default function Footer() {
 
           {/* Column 4: Välikoristus */}
           <div>
-            <h2 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
+            <h2 className="text-white text-[15px] font-bold mb-3 flex items-center gap-2">
               {megaMenuData.columns[2].icon && (
                 <span className="w-5 h-5 text-[#85cbe9]">
                   {megaMenuData.columns[2].icon}
@@ -235,7 +235,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[2].items.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.href} className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9]">
+                  <Link href={item.href} className="text-white/65 text-[15px] no-underline hover:text-[#85cbe9]">
                     {item.label}
                   </Link>
                 </li>
@@ -245,7 +245,7 @@ export default function Footer() {
 
           {/* Column 5: Remonditeenused */}
           <div>
-            <h2 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
+            <h2 className="text-white text-[15px] font-bold mb-3 flex items-center gap-2">
               {megaMenuData.columns[3].icon && (
                 <span className="w-5 h-5 text-[#85cbe9]">
                   {megaMenuData.columns[3].icon}
@@ -256,7 +256,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[3].items.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.href} className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9]">
+                  <Link href={item.href} className="text-white/65 text-[15px] no-underline hover:text-[#85cbe9]">
                     {item.label}
                   </Link>
                 </li>
@@ -266,7 +266,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="flex justify-between items-center mt-5 flex-wrap gap-2.5 text-[13px] text-white/70 font-light">
+        <div className="flex justify-between items-center mt-5 flex-wrap gap-2.5 text-[15px] text-white/70 font-light">
           <span>© {currentYear} SPS Grupp. Kõikõigused kaitstud.</span>
           <div className="flex gap-5">
             <Link href="/privaatsus" className="text-white/70 no-underline hover:text-[#85cbe9]">Privaatsus</Link>

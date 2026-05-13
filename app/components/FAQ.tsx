@@ -41,7 +41,7 @@ export default function FAQ() {
             </p>
             <a
               href="#pakkumine"
-              className="inline-flex items-center gap-2 bg-[#17345a] text-white py-2.5 px-5 rounded-[10px] text-[14px] font-medium no-underline transition-all hover:bg-[#1e4a7a] hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-[#17345a] text-white py-2.5 px-5 rounded-[10px] text-[15px] font-medium no-underline transition-all hover:bg-[#1e4a7a] hover:-translate-y-0.5"
               style={{ boxShadow: "0 2px 12px rgba(23,52,90,0.07)" }}
             >
               Küsi pakkumist
@@ -80,7 +80,7 @@ export default function FAQ() {
                     padding: openIndex === i ? "0 22px 20px" : "0 22px",
                   }}
                 >
-                  <p className="text-[14px] text-[#2f353f] leading-[1.8] font-light">
+                  <p className="text-[15px] text-[#2f353f] leading-[1.8] font-light">
                     {item.a}
                   </p>
                 </div>

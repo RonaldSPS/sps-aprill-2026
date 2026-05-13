@@ -152,11 +152,11 @@ export default function Industries() {
             {/* Dark overlay for text readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
             <div className="absolute bottom-0 left-0 right-0 p-8">
-              <span className="inline-block bg-white/20 backdrop-blur-[8px] px-3.5 py-1.5 rounded-full text-[12px] font-semibold text-white mb-3">
+              <span className="inline-block bg-white/20 backdrop-blur-[8px] px-3.5 py-1.5 rounded-full text-[15px] font-semibold text-white mb-3">
                 {industries[active].badge}
               </span>
               <h3 className="text-[28px] font-bold text-white mb-2">{industries[active].title}</h3>
-              <p className="text-[14px] text-white/80 leading-[1.6] max-w-[400px]">{industries[active].text}</p>
+              <p className="text-[15px] text-white/80 leading-[1.6] max-w-[400px]">{industries[active].text}</p>
             </div>
           </div>
         </div>

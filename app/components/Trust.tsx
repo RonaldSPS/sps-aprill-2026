@@ -137,8 +137,8 @@ export default function Trust() {
                     <span className="w-[22px] h-[22px] text-white">{badge.icon}</span>
                   </div>
                   <div>
-                    <div className="text-[13px] font-bold text-[#17345a] mb-0.5">{badge.title}</div>
-                    <div className="text-[13px] text-[#5a6474]">{badge.subtitle}</div>
+                    <div className="text-[15px] font-bold text-[#17345a] mb-0.5">{badge.title}</div>
+                    <div className="text-[15px] text-[#5a6474]">{badge.subtitle}</div>
                   </div>
                 </div>
               ))}
@@ -173,7 +173,7 @@ export default function Trust() {
                     <span className="w-[18px] h-[18px] text-white">{cert.icon}</span>
                   </div>
                   <div>
-                    <div className="text-[13px] font-bold text-[#17345a]">{cert.title}</div>
+                    <div className="text-[15px] font-bold text-[#17345a]">{cert.title}</div>
                   </div>
                 </div>
               ))}
@@ -210,20 +210,20 @@ export default function Trust() {
             <h3 className="text-[18px] font-bold text-[#17345a] mb-3">
               {services[0].title}
             </h3>
-            <p className="text-[14px] text-[#333a46] leading-[1.7] mb-5 font-light">
+            <p className="text-[15px] text-[#333a46] leading-[1.7] mb-5 font-light">
               Igapäevane ja perioodiline hooldus, mis hoiab teie tööruumid pidevalt puhtad ja esinduslikud.
             </p>
-            <ul className="text-[14px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
+            <ul className="text-[15px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
               <li>• kontorite, kaubanduspindade ja tootmishoonete hooldus</li>
               <li>• põrandate ja tööpindade puhastus</li>
               <li>• sanitaarruumide korrashoid</li>
               <li>• köögid, prügikäitlus ja tarvikute haldus</li>
               <li>• klaaspinnad ja IT-seadmete puhastus</li>
             </ul>
-            <p className="text-[14px] text-[#2d7a4f] font-medium mb-4">
+            <p className="text-[15px] text-[#2d7a4f] font-medium mb-4">
               Kõik vahendid ja tarvikud on hinna sees.
             </p>
-            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#00abff] text-[14px] font-medium no-underline">
+            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#00abff] text-[15px] font-medium no-underline">
               Vaata lähemalt <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -246,20 +246,20 @@ export default function Trust() {
             <h3 className="text-[18px] font-bold text-[#17345a] mb-3">
               {services[1].title}
             </h3>
-            <p className="text-[14px] text-[#333a46] leading-[1.7] mb-5 font-light">
+            <p className="text-[15px] text-[#333a46] leading-[1.7] mb-5 font-light">
               Perioodilised ja spetsiifilised tööd, mis taastavad pindade seisukorra ja pikendavad nende eluiga.
             </p>
-            <ul className="text-[14px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
+            <ul className="text-[15px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
               <li>• akende pesu (seest ja väljast)</li>
               <li>• vaipade ja tekstiilide keemiline puhastus</li>
               <li>• põrandate süvahooldus ja vahatamine</li>
               <li>• ehitusjärgne koristus</li>
               <li>• desinfitseerimine ja eripuhastused</li>
             </ul>
-            <p className="text-[14px] text-[#2d7a4f] font-medium mb-4">
+            <p className="text-[15px] text-[#2d7a4f] font-medium mb-4">
               Kiirreageerimine 24/7 ootamatute olukordade jaoks.
             </p>
-            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#00abff] text-[14px] font-medium no-underline">
+            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#00abff] text-[15px] font-medium no-underline">
               Vaata lähemalt <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -282,20 +282,20 @@ export default function Trust() {
             <h3 className="text-[18px] font-bold text-[#17345a] mb-3">
               {services[2].title}
             </h3>
-            <p className="text-[14px] text-[#333a46] leading-[1.7] mb-5 font-light">
+            <p className="text-[15px] text-[#333a46] leading-[1.7] mb-5 font-light">
               Hooldame teie hoone ümbrust aastaringselt, igal hooajal oma plaaniga.
             </p>
-            <ul className="text-[14px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
+            <ul className="text-[15px] text-[#2f353f] leading-[1.8] mb-5 space-y-1">
               <li>• fassaadi- ja aknapesu (sh kõrghooned)</li>
               <li>• tänavakivide pesu ja hooldus</li>
               <li>• graffiti eemaldamine</li>
               <li>• lume- ja jäätõrje</li>
               <li>• lehekoristus ja hooajalised tööd</li>
             </ul>
-            <p className="text-[14px] text-[#2d7a4f] font-medium mb-4">
+            <p className="text-[15px] text-[#2d7a4f] font-medium mb-4">
               Üks leping, mis katab kõik hooajad ja vajadused.
             </p>
-            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#00abff] text-[14px] font-medium no-underline">
+            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#00abff] text-[15px] font-medium no-underline">
               Vaata lähemalt <span aria-hidden="true">→</span>
             </Link>
           </div>

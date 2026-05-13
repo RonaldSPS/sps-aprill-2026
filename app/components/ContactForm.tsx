@@ -25,14 +25,14 @@ export default function ContactForm() {
         <div className="form-card">
             <div className="section-tag mx-auto w-fit">Küsi pakkumist</div>
             <TwoToneHeading text="Aitame leida optimaalse lahenduse teie koristusvajadustele" className="mb-6 text-center" />
-            <p className="text-[14px] text-[#5a6474] mb-6 font-light text-center">
+            <p className="text-[15px] text-[#5a6474] mb-6 font-light text-center">
               Täitke vorm ja meie spetsialist võtab teiega ühendust 24 tunni jooksul.
             </p>
 
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 mb-3.5">
                 <div className="flex flex-col gap-1.25">
-                  <label htmlFor="form-name" className="text-[13px] font-medium text-[#17345a]">Nimi *</label>
+                  <label htmlFor="form-name" className="text-[15px] font-medium text-[#17345a]">Nimi *</label>
                   <input
                     id="form-name"
                     type="text"
@@ -44,7 +44,7 @@ export default function ContactForm() {
                   />
                 </div>
                 <div className="flex flex-col gap-1.25">
-                  <label htmlFor="form-email" className="text-[13px] font-medium text-[#17345a]">E-mail *</label>
+                  <label htmlFor="form-email" className="text-[15px] font-medium text-[#17345a]">E-mail *</label>
                   <input
                     id="form-email"
                     type="email"
@@ -59,7 +59,7 @@ export default function ContactForm() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 mb-3.5">
                 <div className="flex flex-col gap-1.25">
-                  <label htmlFor="form-phone" className="text-[13px] font-medium text-[#17345a]">Telefon *</label>
+                  <label htmlFor="form-phone" className="text-[15px] font-medium text-[#17345a]">Telefon *</label>
                   <input
                     id="form-phone"
                     type="tel"
@@ -71,7 +71,7 @@ export default function ContactForm() {
                   />
                 </div>
                 <div className="flex flex-col gap-1.25">
-                  <label htmlFor="form-company" className="text-[13px] font-medium text-[#17345a]">Ettevõte</label>
+                  <label htmlFor="form-company" className="text-[15px] font-medium text-[#17345a]">Ettevõte</label>
                   <input
                     id="form-company"
                     type="text"
@@ -84,7 +84,7 @@ export default function ContactForm() {
               </div>
 
               <div className="flex flex-col gap-1.25 mb-1">
-                <label htmlFor="form-message" className="text-[13px] font-medium text-[#17345a]">Lisainfo</label>
+                <label htmlFor="form-message" className="text-[15px] font-medium text-[#17345a]">Lisainfo</label>
                 <textarea
                   id="form-message"
                   value={formData.message}
@@ -102,7 +102,7 @@ export default function ContactForm() {
                 <span className="relative z-10">Saada päring</span>
               </button>
 
-              <p className="text-center text-[13px] text-[#5a6474] mt-3 flex items-center justify-center gap-1.5 font-light">
+              <p className="text-center text-[15px] text-[#5a6474] mt-3 flex items-center justify-center gap-1.5 font-light">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2d9e6b" strokeWidth="2">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                   <polyline points="22 4 12 14.01 9 11.01" />

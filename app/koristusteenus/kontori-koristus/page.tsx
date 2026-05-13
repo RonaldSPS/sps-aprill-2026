@@ -21,6 +21,7 @@ export default function KontoriKoristus() {
         <section
           className="hero-section min-h-[75vh] max-h-[800px] flex items-center px-[5%] pt-[100px] pb-[60px]"
           id="avaleht"
+          aria-label="Kontori koristus"
           style={{ background: "url('/kontorikoristus1.jpg') center/cover no-repeat" }}
         >
           {/* Floating chips */}
@@ -34,7 +35,7 @@ export default function KontoriKoristus() {
               </div>
               <div>
                 <div className="text-[18px] font-bold text-[#17345a] leading-tight">50+</div>
-                <div className="text-[11px] text-[#2f353f]">kontorit</div>
+                <div className="text-[15px] text-[#1f2937]">kontorit</div>
               </div>
             </div>
             <div className="floating-chip animate-float" style={{ background: "rgba(255,255,255,0.95)" }}>
@@ -46,7 +47,7 @@ export default function KontoriKoristus() {
               </div>
               <div>
                 <div className="text-[18px] font-bold text-[#17345a] leading-tight">ISO 9001</div>
-                <div className="text-[11px] text-[#2f353f]">sertifitseeritud</div>
+                <div className="text-[15px] text-[#1f2937]">sertifitseeritud</div>
               </div>
             </div>
             <div className="floating-chip animate-float" style={{ background: "rgba(255,255,255,0.95)" }}>
@@ -58,7 +59,7 @@ export default function KontoriKoristus() {
               </div>
               <div>
                 <div className="text-[18px] font-bold text-[#17345a] leading-tight">Kontrollitud</div>
-                <div className="text-[11px] text-[#2f353f]">personal</div>
+                <div className="text-[15px] text-[#1f2937]">personal</div>
               </div>
             </div>
           </div>
@@ -86,7 +87,7 @@ export default function KontoriKoristus() {
               <div className="flex gap-[10px] mb-[24px] animate-fade-up">
                 <Link
                   href="#pakkumine"
-                  className="btn-primary text-[13px] py-2.5 px-4"
+                  className="btn-primary text-[15px] py-2.5 px-4"
                 >
                   Küsi kontori koristuse pakkumist →
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -94,19 +95,19 @@ export default function KontoriKoristus() {
                     <polyline points="12 5 19 12 12 19" />
                   </svg>
                 </Link>
-                <Link href="tel:6623328" className="btn-outline bg-white/10 border-white/30 text-white hover:bg-white/20 text-[13px] py-2.5 px-4">
+                <Link href="tel:6623328" className="btn-outline bg-white/10 border-white/30 text-white hover:bg-white/20 text-[15px] py-2.5 px-4">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.41 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.97-1.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
                   662 3328
                 </Link>
               </div>
-              <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-white/60 text-[15px] mt-2">
-                <a href="/" className="text-white/60 no-underline hover:text-white transition-colors">Avaleht</a>
-                <span className="text-white/30">/</span>
-                <a href="/#teenused" className="text-white/60 no-underline hover:text-white transition-colors">Koristusteenused</a>
-                <span className="text-white/30">/</span>
-                <span className="text-white/80">Kontori koristus</span>
+              <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-white/80 text-[15px] mt-2">
+                <a href="/" className="text-white/80 no-underline hover:text-white transition-colors">Avaleht</a>
+                <span className="text-white/50">/</span>
+                <a href="/#teenused" className="text-white/80 no-underline hover:text-white transition-colors">Koristusteenused</a>
+                <span className="text-white/50">/</span>
+                <span className="text-white/90">Kontori koristus</span>
               </nav>
             </div>
           </div>
@@ -161,7 +162,7 @@ export default function KontoriKoristus() {
                 { bold: "Sageli puudutatavate pindade desinfitseerimine", desc: "ukselingid, lülitid" },
               ].map((item, i) => (
                 <div key={i} className="bg-[#ffffff78] backdrop-blur-[5px] p-5 rounded-xl transition-all duration-300 border border-transparent hover:scale-105 hover:shadow-lg hover:border-[#85cbe9] hover:bg-white/60 cursor-pointer">
-                  <div className="text-[#5a6474] text-[14px] mb-2">
+                  <div className="text-[#5a6474] text-[15px] mb-2">
                     <span className="font-mono inline-block border-b border-[#5a6474] pb-px pr-5">
                       {String(i + 1).padStart(2, '0')}.
                     </span>
@@ -314,21 +315,21 @@ export default function KontoriKoristus() {
                           : "bg-[#f8fafc] hover:bg-[#eef7fc] hover:scale-105 hover:shadow-lg border-2 border-transparent hover:border-[#85cbe9]"
                       }`}
                     >
-                      <div className={`text-[14px] font-bold mb-1 ${item.highlight ? "text-white" : "text-[#17345a]"}`}>{item.size}</div>
+                      <div className={`text-[15px] font-bold mb-1 ${item.highlight ? "text-white" : "text-[#17345a]"}`}>{item.size}</div>
                       <div className={`text-[26px] font-bold mb-1 ${item.highlight ? "text-white" : "text-[#17345a]"}`}>
                         {item.price}
                       </div>
-                      <div className={`text-[12px] mb-2 ${item.highlight ? "text-white/70" : "text-[#5a6474]"}`}>
+                      <div className={`text-[15px] mb-2 ${item.highlight ? "text-white/70" : "text-[#5a6474]"}`}>
                         {item.period}
                       </div>
-                      <div className={`text-[12px] ${item.highlight ? "text-white/70" : "text-[#5a6474]"}`}>
+                      <div className={`text-[15px] ${item.highlight ? "text-white/70" : "text-[#5a6474]"}`}>
                         {item.area}
                       </div>
                     </div>
                   ))}
                 </div>
 
-                <p className="text-[14px] text-[#5a6474]">
+                <p className="text-[15px] text-[#5a6474]">
                   Regulaarne hoolduskoristus algab <strong>1.2€/m²</strong>, suurpuhastus <strong>1.5€/m²</strong>
                 </p>
               </div>
