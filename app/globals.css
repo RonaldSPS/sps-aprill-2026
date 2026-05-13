@@ -48,6 +48,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Ensure content visible without JavaScript (SEO / accessibility) */
+.no-js .scroll-animate {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 /* Animations */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(36px); }
