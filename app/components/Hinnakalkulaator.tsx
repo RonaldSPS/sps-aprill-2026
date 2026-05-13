@@ -4,12 +4,11 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Hinnakalkulaator() {
-  const [area, setArea] = useState(3000);
-  const [frequency, setFrequency] = useState(3);
+  const [area, setArea] = useState(5000);
 
   const price = useMemo(() => {
-    return Math.round(area * 1.2 * frequency);
-  }, [area, frequency]);
+    return Math.round(area * 1.5);
+  }, [area]);
 
   return (
     <motion.div
@@ -40,7 +39,7 @@ export default function Hinnakalkulaator() {
         <input
           type="range"
           min="1000"
-          max="5000"
+          max="10000"
           step="100"
           value={area}
           onChange={(e) => setArea(Number(e.target.value))}
@@ -48,31 +47,15 @@ export default function Hinnakalkulaator() {
         />
         <div className="flex justify-between mt-3 font-mono text-[15px] text-[#5a6474]">
           <span>1 000</span>
-          <span>3 000</span>
           <span>5 000</span>
+          <span>10 000</span>
         </div>
       </div>
 
       <div className="mb-12">
         <div className="flex items-center justify-between mb-4">
           <label className="uppercase tracking-[0.15em] text-[15px] text-[#5a6474]">Sagedus</label>
-          <strong className="text-xl text-[#17345a]">{frequency}× nädalas</strong>
-        </div>
-
-        <div className="grid grid-cols-5 gap-2">
-          {[1, 2, 3, 4, 5].map((item) => (
-            <button
-              key={item}
-              onClick={() => setFrequency(item)}
-              className={`rounded-2xl py-4 text-xl font-bold transition ${
-                frequency === item
-                  ? "bg-[#85cbe9] text-white"
-                  : "bg-[#eceef1] hover:bg-[#d4eef9] text-[#5a6474]"
-              }`}
-            >
-              {item}×
-            </button>
-          ))}
+          <strong className="text-xl text-[#17345a]">5× nädalas</strong>
         </div>
       </div>
 

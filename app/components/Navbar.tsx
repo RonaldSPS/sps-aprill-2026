@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#teenused", label: "Teenused" },
   { href: "#kliendid", label: "Tule tööle" },
   { href: "#garantii", label: "SPS Grupp" },
+  { href: "#blogi", label: "Blogi" },
   { href: "#kkk", label: "Kontakt" },
 ];
 
@@ -15,11 +16,15 @@ const megaMenuData = {
   title: "Koristusteenused",
   columns: [
     {
-      title: "Regulaarne koristusteenus",
+      title: "Sisekoristus",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           <path d="M9 22V12h6v10" />
+          <path d="M5 8h14" />
+          <path d="M9 2v5" />
+          <path d="M15 2v5" />
+          <rect x="6" y="8" width="12" height="3" rx="1" />
         </svg>
       ),
       items: [
@@ -30,11 +35,14 @@ const megaMenuData = {
       ],
     },
     {
-      title: "Sisepuhastus",
+      title: "Eripuhastustööd",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-          <path d="M9 22V12h6v10" />
+          <rect x="3" y="8" width="6" height="10" rx="1" />
+          <rect x="10" y="14" width="4" height="2" rx="0.5" />
+          <path d="M14 8h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4" />
+          <path d="M17 8V6a2 2 0 0 0-2-2h-1" />
+          <line x1="6" y1="11" x2="8" y2="11" />
         </svg>
       ),
       items: [
@@ -46,6 +54,9 @@ const megaMenuData = {
         { label: "Tulekahjustuste eemaldus", href: "#teenused" },
         { label: "Eskalaatorite süvapuhastus", href: "#teenused" },
         { label: "Desinfitseerimine", href: "#teenused" },
+        { label: "Tänavakivide pesu ja hooldus", href: "#teenused" },
+        { label: "Graffiti eemaldamine", href: "#teenused" },
+        { label: "Fassaadipesu", href: "#teenused" },
       ],
     },
     {
@@ -56,14 +67,15 @@ const megaMenuData = {
           <path d="M5 21V7l8-4 8 4v14" />
           <rect x="9" y="13" width="6" height="8" />
           <path d="M10 9h4" />
+          <circle cx="16" cy="4" r="1" fill="#17345a" stroke="none" />
+          <path d="M16 7v1" />
         </svg>
       ),
       items: [
-        { label: "Tänavakivide pesu ja hooldus", href: "#teenused" },
-        { label: "Graffiti eemaldamine", href: "#teenused" },
-        { label: "Fassaadipesu", href: "#teenused" },
         { label: "Muru niitmine", href: "#teenused" },
         { label: "Lumekoristus", href: "#teenused" },
+        { label: "Kojamehe teenus", href: "#teenused" },
+        { label: "Lehekoristus", href: "#teenused" },
       ],
     },
     {
@@ -83,14 +95,12 @@ const megaMenuData = {
         { label: "Katuse remont", href: "#teenused" },
         { label: "Lammutustööd", href: "#teenused" },
       ],
-      highlighted: true,
     },
   ],
 };
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [menuTimeout, setMenuTimeout] = useState<NodeJS.Timeout | null>(null);
@@ -125,7 +135,7 @@ export default function Navbar() {
             alt="SPS Grupp"
             width={38}
             height={38}
-            style={{ width: "auto", height: "38px" }}
+            style={{ width: "auto", height: "38px", color: "#2d3748" }}
           />
 </Link>
 
@@ -138,19 +148,19 @@ export default function Navbar() {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <button
-                  className="text-[#17345a] text-[14px] font-medium transition-all hover:text-[#17345a] cursor-pointer bg-transparent border-none flex items-center h-full py-0"
+                <Link
+                  href={link.href}
+                  className="text-[#17345a] text-[14px] font-medium transition-all hover:text-[#17345a] cursor-pointer bg-transparent border-none flex items-center h-full py-0 no-underline"
                 >
                   {link.label}
-                </button>
-                {megaMenuOpen && (
-                  <div 
-                    className="mega-menu w-[1100px] bg-white rounded-b-[16px] shadow-lg border border-[rgba(23,52,90,0.08)] p-6 grid grid-cols-4 gap-8"
-                    onMouseEnter={() => setMegaMenuOpen(true)}
-                    onMouseLeave={() => setMegaMenuOpen(false)}
-                  >
+                </Link>
+                <div 
+                  className={`mega-menu w-[1100px] bg-white rounded-b-[16px] shadow-lg border border-[rgba(23,52,90,0.08)] p-6 grid grid-cols-4 gap-8 transition-opacity duration-200 ${megaMenuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"}`}
+                  onMouseEnter={() => setMegaMenuOpen(true)}
+                  onMouseLeave={() => setMegaMenuOpen(false)}
+                >
                     {megaMenuData.columns.map((col, colIdx) => (
-                      <div key={colIdx} className={col.highlighted ? "bg-[#e8ebef] rounded-lg p-4 -m-4" : ""}>
+                      <div key={colIdx}>
                         <div className="text-[14px] font-bold text-[#17345a] mb-3 flex items-center gap-2">
                           {col.icon && <span className="w-5 h-5">{col.icon}</span>}
                           {col.title}
@@ -169,7 +179,6 @@ export default function Navbar() {
                       </div>
                     ))}
                   </div>
-                )}
               </div>
             ) : (
               <Link
@@ -223,8 +232,7 @@ export default function Navbar() {
       </button>
 
       {/* Mobile mega menu (fullscreen on mobile) */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-white z-[1001] overflow-y-auto">
+        <div className={`fixed inset-0 bg-white z-[1001] overflow-y-auto transition-opacity duration-300 ${mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}>
           {/* Sticky header with close button */}
           <div className="sticky top-0 bg-white z-10 flex justify-between items-center p-4 border-b border-gray-100">
             <Link href="/" className="flex items-center gap-2.5" onClick={() => setMobileMenuOpen(false)}>
@@ -233,7 +241,7 @@ export default function Navbar() {
                 alt="SPS Grupp"
                 width={32}
                 height={32}
-                style={{ width: "auto", height: "32px" }}
+                style={{ width: "auto", height: "32px", color: "#2d3748" }}
               />
             </Link>
             <button onClick={() => setMobileMenuOpen(false)} className="p-2" aria-label="Sulge menüü">
@@ -304,7 +312,6 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-)}
     </nav>
   );
 }

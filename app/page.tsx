@@ -13,11 +13,11 @@ import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Koristusfirma Tallinnas | SPS Grupp",
-  description: "20+ aastase kogemusega koristusfirma Tallinnas. Hooldame 500 000m² äripindu kuus. ISO 9001 sertifikaat. Küsi tasuta pakkumist!",
+  description: "20+ aastase kogemusega koristusfirma Tallinnas. Hooldame üle miljoni m² äripindu kuus. ISO 9001 sertifikaat. Küsi tasuta pakkumist!",
   keywords: "koristusfirma, koristusfirmad, puhastusfirma, koristusfirma tallinnas, äripindade koristus, koristusteenus tallinn",
   openGraph: {
     title: "Koristusfirma Tallinnas | SPS Grupp",
-    description: "20+ aastase kogemusega koristusfirma Tallinnas. Hooldame 500 000m² äripindu kuus.",
+    description: "20+ aastase kogemusega koristusfirma Tallinnas. Hooldame üle miljoni m² äripindu kuus.",
     type: "website",
     locale: "et_EE",
   },
@@ -54,6 +54,25 @@ const jsonLd = {
   ]
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Avaleht",
+      "item": "https://spsgrupp.ee"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Koristusfirma",
+      "item": "https://spsgrupp.ee"
+    }
+  ]
+};
+
 export default function Home() {
   return (
     <>
@@ -61,16 +80,18 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <Navbar />
+      <Hero />
       <main>
-        <ScrollAnimation animation="fade-up">
-          <Hero />
-        </ScrollAnimation>
         <ScrollAnimation animation="fade-up" delay={100}>
           <Logos />
         </ScrollAnimation>
         <ScrollAnimation animation="fade-up" delay={200}>
-          <Services />
+          <Trust />
         </ScrollAnimation>
         <ScrollAnimation animation="fade-up" delay={300}>
           <Testimonials />
@@ -79,7 +100,7 @@ export default function Home() {
           <Industries />
         </ScrollAnimation>
         <ScrollAnimation animation="fade-up" delay={500}>
-          <Trust />
+          <Services />
         </ScrollAnimation>
         <ScrollAnimation animation="fade-up" delay={600}>
           <ContactForm />

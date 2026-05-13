@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Image src="/SPS_LOGO.svg" alt="SPS Grupp" width={38} height={38} />
+        <Image src="/SPS_LOGO.svg" alt="SPS Grupp" width={38} height={38} style={{ color: "#2d3748" }} />
         <div className="hidden md:flex items-center gap-8">
           <Link href="#teenused" className="text-[#17345a] text-sm font-medium hover:text-[#5ab5da] transition-colors">Teenused</Link>
           <Link href="#kliendid" className="text-[#17345a] text-sm font-medium hover:text-[#5ab5da] transition-colors">Tule tööle</Link>
@@ -54,7 +54,7 @@ const Hero = () => (
       </div>
       <div className="order-1 md:order-2 relative">
         <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-          <Image src="/FrontHeroCar.jpg" alt="Hero" fill className="object-cover" />
+          <Image src="/FrontHeroCar.jpg" alt="Hero" fill className="object-cover" style={{ color: "#2d3748" }} />
         </div>
         {/* Floating stats card */}
         <div className="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-gray-100">
@@ -294,7 +294,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid md:grid-cols-4 gap-12 mb-12">
         <div>
-          <Image src="/SPS_LOGO.svg" alt="SPS Grupp" width={38} height={38} className="mb-4" />
+          <Image src="/SPS_LOGO.svg" alt="SPS Grupp" width={38} height={38} className="mb-4" style={{ color: "#2d3748" }} />
           <p className="text-white/60 text-sm leading-relaxed">Professionaalne koristusteenus ärikliendile.</p>
         </div>
         <div>

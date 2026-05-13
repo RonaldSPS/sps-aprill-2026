@@ -8,6 +8,7 @@ import Testimonials from "../../components/Testimonials";
 import FAQ from "../../components/FAQ";
 import FooterCTA from "../../components/FooterCTA";
 import ContactForm from "../../components/ContactForm";
+import TwoToneHeading from "../../components/TwoToneHeading";
 import ScrollAnimation from "../../components/ScrollAnimation";
 import Hinnakalkulaator from "../../components/Hinnakalkulaator";
 
@@ -76,9 +77,9 @@ export default function KontoriKoristus() {
             >
               <h1 className="text-[clamp(28px,4.2vw,56px)] font-bold text-white leading-[1.12] -tracking-[1px] mb-[18px]">
                 Kontori koristus<br />
-                <span className="text-[#85cbe9]">Tallinnas ja Harjumaal</span>
+                <span className="text-[#00abff]">Tallinnas ja Harjumaal</span>
               </h1>
-              <p className="text-[15px] text-white/90 leading-[1.75] mb-[30px] max-w-[500px] font-light">
+              <p className="text-[15px] text-white leading-[1.75] mb-[30px] max-w-[500px] font-light">
                 Regulaarne kontorikoristus alates <strong className="text-white font-medium">1.2€/m²</strong>. 
                 Paindlik graafik, koolitatud personal ja kvaliteedikontroll iga käiguga.
               </p>
@@ -100,6 +101,13 @@ export default function KontoriKoristus() {
                   662 3328
                 </Link>
               </div>
+              <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-white/60 text-[15px] mt-2">
+                <a href="/" className="text-white/60 no-underline hover:text-white transition-colors">Avaleht</a>
+                <span className="text-white/30">/</span>
+                <a href="/#teenused" className="text-white/60 no-underline hover:text-white transition-colors">Koristusteenused</a>
+                <span className="text-white/30">/</span>
+                <span className="text-white/80">Kontori koristus</span>
+              </nav>
             </div>
           </div>
         </section>
@@ -108,9 +116,7 @@ export default function KontoriKoristus() {
         <ScrollAnimation animation="fade-up">
         <section className="py-[100px] bg-white">
           <div className="max-w-[1280px] mx-auto px-[5%]">
-            <h2 className="section-title mb-8">
-              Kas teie kontorit koristab keegi, keda te tegelikult ei usalda?
-            </h2>
+            <TwoToneHeading text="Kas teie kontorit koristab keegi, keda te tegelikult ei usalda?" className="mb-8" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] text-[16px] text-[#2f353f] leading-[1.8] font-light">
               <div>
                 <strong>Paljud ettevõtted on olukorras, kus koristaja küll käib, aga tulemus ei rahulda.</strong> Tolm koguneb kappide peale, prügikastid on hommikul endiselt täis ja WC-s lõpevad tarvikud kõige ebasobivamal hetkel. Töötajad märkavad ja kliendid samuti.
@@ -120,7 +126,7 @@ export default function KontoriKoristus() {
                 <strong>SPS Grupis läbib iga koristaja koolituse just kontorikeskkonna jaoks.</strong> Me teame, kuidas käsitleda IT-tehnikat, tundlikke dokumente ja esinduspindu nii, et te ei pea enam muretsema.
               </div>
             </div>
-</div>
+          </div>
         </section>
         </ScrollAnimation>
 
@@ -139,7 +145,7 @@ export default function KontoriKoristus() {
                 </svg>
                 Teenuse sisu
               </div>
-              <h2 className="section-title">Mida sisaldab kontori koristusteenus?</h2>
+              <TwoToneHeading text="Mida sisaldab kontori koristusteenus?" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -182,7 +188,7 @@ export default function KontoriKoristus() {
                 </svg>
                 Miks meie
               </div>
-              <h2 className="section-title">Miks üle 50 kontori usaldab koristuse SPS Grupile?</h2>
+              <TwoToneHeading text="Miks üle 50 kontori usaldab koristuse SPS Grupile?" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-center">
@@ -266,6 +272,7 @@ export default function KontoriKoristus() {
                   width={600}
                   height={700}
                   className="w-full h-auto object-cover"
+                  style={{ color: "#2d3748" }}
                 />
               </div>
             </div>
@@ -284,7 +291,7 @@ export default function KontoriKoristus() {
                 </svg>
                 Hind
               </div>
-              <h2 className="section-title">Millest sõltub kontori koristuse hind?</h2>
+              <TwoToneHeading text="Millest sõltub kontori koristuse hind?" />
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-start">

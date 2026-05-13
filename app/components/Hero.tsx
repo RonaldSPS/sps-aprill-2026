@@ -64,8 +64,8 @@ export default function Hero() {
               <path d="M9 21V9" />
             </svg>
           }
-          bigText="500 000m²"
-          smallText="igakuiselt"
+          bigText="Üle miljoni m²"
+          smallText="igapäevaselt"
         />
       </div>
 
@@ -84,11 +84,12 @@ export default function Hero() {
         >
           <h1 className="text-[clamp(28px,4.2vw,56px)] leading-[1.12] -tracking-[1px] mb-[18px]" style={{ fontFamily: 'Ubuntu', fontWeight: 400, color: 'white' }}>
             Koristusfirma<br />
-            <span className="text-[#85cbe9]" style={{ fontWeight: 600 }}>ärikliendile</span>
+            <span className="text-[#00abff]" style={{ fontWeight: 600 }}>ärikliendile</span>
           </h1>
-          <p className="text-[16px] md:text-[17px] text-white/90 leading-[1.75] mb-[30px] max-w-[500px] font-light">
-            Hooldame igakuiselt üle <strong className="text-white font-medium">500 000m²</strong>{" "}
-            kontori-, kaubandus- ja tootmispindu Harjumaal. ISO sertifitseeritud.
+          <p className="text-[16px] md:text-[17px] text-white leading-[1.75] mb-[30px] max-w-[500px] font-light">
+            Koristusfirma SPS Grupp hooldab iga päev üle{" "}
+            <strong className="text-white font-medium">miljoni m²</strong>{" "}
+            kontori-, kaubandus- ja tootmispindu Harjumaal.
           </p>
           <div className="flex gap-[10px] mb-[24px] animate-fade-up">
             <Link
@@ -108,6 +109,11 @@ export default function Hero() {
               662 3328
             </Link>
           </div>
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-white/60 text-[15px]">
+            <a href="/" className="text-white/60 no-underline hover:text-white transition-colors">Avaleht</a>
+            <span className="text-white/30">/</span>
+            <span className="text-white/80">Koristusfirma</span>
+          </nav>
         </div>
       </div>
     </section>

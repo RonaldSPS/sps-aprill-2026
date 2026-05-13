@@ -5,6 +5,7 @@ const navLinks = [
   { href: "#teenused", label: "Teenused" },
   { href: "#kliendid", label: "Tule tööle" },
   { href: "#garantii", label: "SPS Grupp" },
+  { href: "#blogi", label: "Blogi" },
   { href: "#kkk", label: "Kontakt" },
 ];
 
@@ -12,11 +13,15 @@ const megaMenuData = {
   title: "Koristusteenused",
   columns: [
     {
-      title: "Regulaarne koristusteenus",
+      title: "Sisekoristus",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="#85cbe9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           <path d="M9 22V12h6v10" />
+          <path d="M5 8h14" />
+          <path d="M9 2v5" />
+          <path d="M15 2v5" />
+          <rect x="6" y="8" width="12" height="3" rx="1" />
         </svg>
       ),
       items: [
@@ -26,11 +31,14 @@ const megaMenuData = {
       ],
     },
     {
-      title: "Sisepuhastus",
+      title: "Eripuhastustööd",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="#85cbe9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-          <path d="M9 22V12h6v10" />
+          <rect x="3" y="8" width="6" height="10" rx="1" />
+          <rect x="10" y="14" width="4" height="2" rx="0.5" />
+          <path d="M14 8h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4" />
+          <path d="M17 8V6a2 2 0 0 0-2-2h-1" />
+          <line x1="6" y1="11" x2="8" y2="11" />
         </svg>
       ),
       items: [
@@ -42,30 +50,34 @@ const megaMenuData = {
         { label: "Tulekahjustuste eemaldus", href: "#teenused" },
         { label: "Eskalaatorite süvapuhastus", href: "#teenused" },
         { label: "Desinfitseerimine", href: "#teenused" },
+        { label: "Tänavakivide pesu ja hooldus", href: "#teenused" },
+        { label: "Graffiti eemaldamine", href: "#teenused" },
+        { label: "Fassaadipesu", href: "#teenused" },
       ],
     },
     {
       title: "Välikoristus",
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#85cbe9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 21h18" />
           <path d="M5 21V7l8-4 8 4v14" />
           <rect x="9" y="13" width="6" height="8" />
           <path d="M10 9h4" />
+          <circle cx="16" cy="4" r="1" fill="#85cbe9" stroke="none" />
+          <path d="M16 7v1" />
         </svg>
       ),
       items: [
-        { label: "Tänavakivide pesu ja hooldus", href: "#teenused" },
-        { label: "Graffiti eemaldamine", href: "#teenused" },
-        { label: "Fassaadipesu", href: "#teenused" },
         { label: "Muru niitmine", href: "#teenused" },
         { label: "Lumekoristus", href: "#teenused" },
+        { label: "Kojamehe teenus", href: "#teenused" },
+        { label: "Lehekoristus", href: "#teenused" },
       ],
     },
     {
       title: "Remonditeenused",
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#85cbe9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
         </svg>
       ),
@@ -79,7 +91,6 @@ const megaMenuData = {
         { label: "Katuse remont", href: "#teenused" },
         { label: "Lammutustööd", href: "#teenused" },
       ],
-      highlighted: true,
     },
   ],
 };
@@ -100,7 +111,7 @@ export default function Footer() {
                 alt="SPS Grupp"
                 width={38}
                 height={38}
-                style={{ width: "auto", height: "38px" }}
+                style={{ width: "auto", height: "38px", color: "#2d3748" }}
               />
             </Link>
 
@@ -108,28 +119,28 @@ export default function Footer() {
             <div className="mt-4 space-y-1">
               <a
                 href={"https://www.google.com/maps/place/Tetris+B%C3%BCroohoone,+Mustam%C3%A4e+tee+46,+10621+Tallinn/@59.4162971,24.6890432,17z/data=!3m1!4b1!4m6!3m5!1s0x469294f5fec8e2fd:0xc2b28e6f780f9897!8m2!3d59.4162944!4d24.6916181!16s%2Fg%2F1q6jyqwpb?entry=tts&g_ep=EgoyMDI1MDIyMy4xIPu8ASoASAFQAw%3D%3D"}
-                className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9] block"
+                className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9] block"
                 rel="nofollow"
               >
                 {"MUSTAMÄE TEE 46, 10621 TALLINN"}
               </a>
               <a
                 href={`tel:${["+", "3", "7", "2", " ", "5", "5", "6", "0", " ", "5", "1", "4", "7"].join("")}`}
-                className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9] block"
+                className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9] block"
                 rel="nofollow"
               >
                 {["+372", " ", "5560", " ", "5147"].join("")}
               </a>
               <a
                 href={`tel:${["+", "3", "7", "2", " ", "6", "6", "2", " ", "3", "3", "2", "8"].join("")}`}
-                className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9] block"
+                className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9] block"
                 rel="nofollow"
               >
                 {["+372", " ", "662", " ", "3328"].join("")}
               </a>
               <a
                 href={`mailto:${["i", "n", "f", "o", "@", "s", "p", "s", "g", "r", "u", "p", "p", ".", "e", "e"].join("")}`}
-                className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9] block"
+                className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9] block"
                 rel="nofollow"
               >
                 {["info", "@", "spsgrupp", ".ee"].join("")}
@@ -139,7 +150,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-1 list-none mt-4 mb-6">
               {navLinks.slice(1).map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9]">
+                  <Link href={link.href} className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9]">
                     {link.label}
                   </Link>
                 </li>
@@ -173,7 +184,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[0].items.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.href} className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9]">
+                  <Link href={item.href} className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9]">
                     {item.label}
                   </Link>
                 </li>
@@ -185,12 +196,12 @@ export default function Footer() {
                 alt="Hästi juhitud ettevõte"
                 width={120}
                 height={120}
-                style={{ width: "auto", height: "auto" }}
+                style={{ width: "auto", height: "auto", color: "#2d3748" }}
               />
             </a>
           </div>
 
-          {/* Column 3: Sisepuhastus */}
+          {/* Column 3: Eripuhastustööd */}
           <div>
             <h2 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
               {megaMenuData.columns[1].icon && (
@@ -203,7 +214,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[1].items.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.href} className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9]">
+                  <Link href={item.href} className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9]">
                     {item.label}
                   </Link>
                 </li>
@@ -224,7 +235,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[2].items.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.href} className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9]">
+                  <Link href={item.href} className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9]">
                     {item.label}
                   </Link>
                 </li>
@@ -245,7 +256,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[3].items.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.href} className="text-white/45 text-[13px] no-underline hover:text-[#85cbe9]">
+                  <Link href={item.href} className="text-white/65 text-[13px] no-underline hover:text-[#85cbe9]">
                     {item.label}
                   </Link>
                 </li>
@@ -255,11 +266,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="flex justify-between items-center mt-5 flex-wrap gap-2.5 text-[13px] text-white/50 font-light">
+        <div className="flex justify-between items-center mt-5 flex-wrap gap-2.5 text-[13px] text-white/70 font-light">
           <span>© {currentYear} SPS Grupp. Kõikõigused kaitstud.</span>
           <div className="flex gap-5">
-            <span className="text-white/50">Privaatsus</span>
-            <span className="text-white/50">Kasutustingimused</span>
+            <Link href="/privaatsus" className="text-white/70 no-underline hover:text-[#85cbe9]">Privaatsus</Link>
+            <Link href="/kasutustingimused" className="text-white/70 no-underline hover:text-[#85cbe9]">Kasutustingimused</Link>
           </div>
         </div>
       </div>

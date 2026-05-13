@@ -84,7 +84,7 @@ const Hero = () => (
       
       <div className="relative">
         <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-          <Image src="/FrontHeroCar.jpg" alt="Hero" fill className="object-cover" />
+          <Image src="/FrontHeroCar.jpg" alt="Hero" fill className="object-cover" style={{ color: "#2d3748" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
         </div>
         

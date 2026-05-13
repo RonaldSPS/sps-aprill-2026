@@ -129,6 +129,7 @@ export default function Industries() {
                 sizes="(max-width: 768px) 100vw, 75vw"
                 className="object-cover"
                 priority
+                style={{ color: "#2d3748" }}
               />
             </div>
             
@@ -144,6 +145,7 @@ export default function Industries() {
                 sizes="(max-width: 768px) 100vw, 75vw"
                 className="object-cover"
                 priority
+                style={{ color: "#2d3748" }}
               />
             </div>
             

@@ -21,7 +21,7 @@ export default function TwoToneHeading({ text, className = "" }: TwoToneHeadingP
       <div style={{ 
         fontFamily: 'Ubuntu', 
         fontWeight: 600, 
-        color: 'var(--sky)' 
+        color: 'var(--sky-text)' 
       }}>
         {secondHalf}
       </div>

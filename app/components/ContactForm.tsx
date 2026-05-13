@@ -32,8 +32,9 @@ export default function ContactForm() {
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 mb-3.5">
                 <div className="flex flex-col gap-1.25">
-                  <label className="text-[13px] font-medium text-[#17345a]">Nimi *</label>
+                  <label htmlFor="form-name" className="text-[13px] font-medium text-[#17345a]">Nimi *</label>
                   <input
+                    id="form-name"
                     type="text"
                     required
                     value={formData.name}
@@ -43,8 +44,9 @@ export default function ContactForm() {
                   />
                 </div>
                 <div className="flex flex-col gap-1.25">
-                  <label className="text-[13px] font-medium text-[#17345a]">E-mail *</label>
+                  <label htmlFor="form-email" className="text-[13px] font-medium text-[#17345a]">E-mail *</label>
                   <input
+                    id="form-email"
                     type="email"
                     required
                     value={formData.email}
@@ -57,8 +59,9 @@ export default function ContactForm() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 mb-3.5">
                 <div className="flex flex-col gap-1.25">
-                  <label className="text-[13px] font-medium text-[#17345a]">Telefon *</label>
+                  <label htmlFor="form-phone" className="text-[13px] font-medium text-[#17345a]">Telefon *</label>
                   <input
+                    id="form-phone"
                     type="tel"
                     required
                     value={formData.phone}
@@ -68,8 +71,9 @@ export default function ContactForm() {
                   />
                 </div>
                 <div className="flex flex-col gap-1.25">
-                  <label className="text-[13px] font-medium text-[#17345a]">Ettevõte</label>
+                  <label htmlFor="form-company" className="text-[13px] font-medium text-[#17345a]">Ettevõte</label>
                   <input
+                    id="form-company"
                     type="text"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
@@ -80,8 +84,9 @@ export default function ContactForm() {
               </div>
 
               <div className="flex flex-col gap-1.25 mb-1">
-                <label className="text-[13px] font-medium text-[#17345a]">Lisainfo</label>
+                <label htmlFor="form-message" className="text-[13px] font-medium text-[#17345a]">Lisainfo</label>
                 <textarea
+                  id="form-message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="px-3 py-2.75 border border-[rgba(23,52,90,0.12)] rounded-[10px] text-[15px] text-[#2d3748] bg-white outline-none transition-all focus:border-[#5ab5da] focus:shadow-[0_0_0_3px_rgba(133,203,233,0.15)] resize-y min-h-[90px]"

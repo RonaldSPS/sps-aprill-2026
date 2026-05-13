@@ -10,7 +10,6 @@ const logos = [
   "eften.png",
   "elering.png",
   "ericsson.png",
-  "hobbyhall.png",
   "infoauto.png",
   "leibur.png",
   "maxima.png",
@@ -53,6 +52,7 @@ export default function Logos() {
                 width={90}
                 height={50}
                 className="object-contain"
+                style={{ color: "#2d3748" }}
               />
             </div>
           ))}
