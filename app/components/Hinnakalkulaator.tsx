@@ -32,11 +32,12 @@ export default function Hinnakalkulaator() {
 
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">
-          <label className="uppercase tracking-[0.15em] text-[15px] text-[#5a6474]">Pindala</label>
+          <label htmlFor="area-slider" className="uppercase tracking-[0.15em] text-[15px] text-[#5a6474]">Pindala</label>
           <strong className="text-xl text-[#17345a]">{area} m²</strong>
         </div>
 
         <input
+          id="area-slider"
           type="range"
           min="1000"
           max="10000"

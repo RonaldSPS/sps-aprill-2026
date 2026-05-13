@@ -75,7 +75,7 @@ export default function Hero() {
         <div 
           className="animate-fade-up order-2 md:order-1"
           style={{ 
-            background: "rgba(38, 42, 45, 0.42)", 
+            background: "rgba(38, 42, 45, 0.62)", 
             backdropFilter: "blur(5px)",
             WebkitBackdropFilter: "blur(5px)",
             padding: "32px",
@@ -85,7 +85,7 @@ export default function Hero() {
         >
           <h1 className="text-[clamp(28px,4.2vw,56px)] leading-[1.12] -tracking-[1px] mb-[18px]" style={{ fontFamily: 'Ubuntu', fontWeight: 400, color: 'white' }}>
             Koristusfirma<br />
-            <span className="text-[#00abff]" style={{ fontWeight: 600 }}>ärikliendile</span>
+            <span className="text-[#3abeff]" style={{ fontWeight: 600 }}>ärikliendile</span>
           </h1>
           <p className="text-[16px] md:text-[17px] text-white leading-[1.75] mb-[30px] max-w-[500px] font-light">
             Koristusfirma SPS Grupp hooldab iga päev üle{" "}

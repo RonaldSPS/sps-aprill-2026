@@ -132,7 +132,7 @@ export default function Navbar() {
         <Link href="/" className="logo flex items-center gap-2.5 no-underline">
           <Image
             src="/SPS_LOGO.svg"
-            alt="SPS Grupp"
+            alt="SPS Grupp — koristusfirma"
             width={38}
             height={38}
             style={{ width: "auto", height: "38px", color: "#2d3748" }}
@@ -238,7 +238,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-2.5" onClick={() => setMobileMenuOpen(false)}>
               <Image
                 src="/SPS_LOGO.svg"
-                alt="SPS Grupp"
+                alt="SPS Grupp — koristusfirma"
                 width={32}
                 height={32}
                 style={{ width: "auto", height: "32px", color: "#2d3748" }}

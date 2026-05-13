@@ -25,7 +25,7 @@ export default function KontoriKoristus() {
           style={{ background: "url('/kontorikoristus1.jpg') center/cover no-repeat" }}
         >
           {/* Floating chips */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex gap-[20px] z-20 hidden md:flex">
+          <div className="absolute top-1/2 -translate-y-1/2 left-1/2 flex gap-[20px] z-20 hidden md:flex">
             <div className="floating-chip animate-float" style={{ background: "rgba(255,255,255,0.95)" }}>
               <div className="chip-icon chip-icon-blue w-11 h-11 rounded-xl flex items-center justify-center">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#5ab5da" strokeWidth="2">
@@ -68,7 +68,7 @@ export default function KontoriKoristus() {
             <div 
               className="animate-fade-up order-2 md:order-1"
               style={{ 
-                background: "rgba(55, 54, 45, 0.45)", 
+                background: "rgba(55, 54, 45, 0.62)", 
                 backdropFilter: "blur(5px)",
                 WebkitBackdropFilter: "blur(3px)",
                 padding: "32px",
@@ -78,7 +78,7 @@ export default function KontoriKoristus() {
             >
               <h1 className="text-[clamp(28px,4.2vw,56px)] font-bold text-white leading-[1.12] -tracking-[1px] mb-[18px]">
                 Kontori koristus<br />
-                <span className="text-[#00abff]">Tallinnas ja Harjumaal</span>
+                <span className="text-[#3abeff]">Tallinnas ja Harjumaal</span>
               </h1>
               <p className="text-[15px] text-white leading-[1.75] mb-[30px] max-w-[500px] font-light">
                 Regulaarne kontorikoristus alates <strong className="text-white font-medium">1.2€/m²</strong>. 
@@ -89,7 +89,7 @@ export default function KontoriKoristus() {
                   href="#pakkumine"
                   className="btn-primary text-[15px] py-2.5 px-4"
                 >
-                  Küsi kontori koristuse pakkumist →
+                  Küsi kontori koristuse pakkumist
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <line x1="5" y1="12" x2="19" y2="12" />
                     <polyline points="12 5 19 12 12 19" />
@@ -269,7 +269,7 @@ export default function KontoriKoristus() {
               <div className="relative rounded-2xl overflow-hidden">
                 <Image
                   src="/kontorikoristus2.jpg"
-                  alt="Kontori koristus"
+                  alt="Koristusfirma kontori koristus"
                   width={600}
                   height={700}
                   className="w-full h-auto object-cover"

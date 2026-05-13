@@ -58,9 +58,12 @@ export default function FAQ() {
               <div
                 key={i}
                 className={`faq-item ${openIndex === i ? "open" : ""}`}
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
               >
-                <div className="faq-question">
+                <button
+                  className="faq-question w-full text-left"
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  aria-expanded={openIndex === i}
+                >
                   <span className="text-[15px] font-medium text-[#17345a] flex-1">
                     {item.q}
                   </span>
@@ -72,7 +75,7 @@ export default function FAQ() {
                       <line x1="5" y1="12" x2="19" y2="12" />
                     </svg>
                   </div>
-                </div>
+                </button>
                 <div
                   className="overflow-hidden transition-all"
                   style={{

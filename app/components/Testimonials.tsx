@@ -15,7 +15,7 @@ const testimonials = [
     initials: "M",
   },
   {
-    quote: "Tahame kiita puhastusteenindajat. Võrreldes eelmiste teenusepakkujatega nagu öö ja päev! Viisakad & positiivsed. Ning WC-s on ka nüüd alati kõik tarvikud olemas.",
+    quote: "Võrreldes eelmise teenusepakkujaga on SPS Grupi koristusteenus tunduvalt parem — põrandad on alati läikivad ja kontoripind hästi hoolitsetud.",
     author: "Norma",
     location: "",
     initials: "N",
@@ -56,7 +56,7 @@ export default function Testimonials() {
                   <div className="text-[15px] text-[#5a6474]">{t.location}</div>
                 </div>
               </div>
-              <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#00abff] text-[15px] font-medium no-underline mt-4 transition-all hover:text-[#17345a] hover:gap-2.5">
+              <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#0078b5] text-[15px] font-medium no-underline mt-4 transition-all hover:text-[#17345a] hover:gap-2.5">
                 Soovid sama tulemust? Küsi pakkumist <span aria-hidden="true">→</span>
               </Link>
             </div>

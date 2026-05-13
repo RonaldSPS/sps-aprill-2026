@@ -35,8 +35,8 @@ const logos = [
 
 export default function Logos() {
   return (
-    <section className="logos-section bg-white border-t border-b border-[rgba(23,52,90,0.05)]" id="kliendid">
-      <div className="overflow-hidden relative">
+    <section className="logos-section bg-white border-t border-b border-[rgba(23,52,90,0.05)]" id="kliendid" aria-label="Meie kliendid">
+      <div className="overflow-hidden relative" aria-hidden="true">
         <div 
           className="flex items-center gap-0"
           style={{ width: "max-content", animation: "logoScroll 160s linear infinite" }}
@@ -48,7 +48,7 @@ export default function Logos() {
             >
               <Image
                 src={`/logod/${logo}`}
-                alt={logo.replace(".png", "")}
+                alt=""
                 width={90}
                 height={50}
                 className="object-contain"

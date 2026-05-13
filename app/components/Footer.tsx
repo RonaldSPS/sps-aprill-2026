@@ -108,7 +108,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2.5 no-underline mb-4">
               <Image
                 src="/SPS_LOGO.svg"
-                alt="SPS Grupp"
+                alt="SPS Grupp — koristusfirma"
                 width={38}
                 height={38}
                 style={{ width: "auto", height: "38px", color: "#2d3748" }}
@@ -267,7 +267,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex justify-between items-center mt-5 flex-wrap gap-2.5 text-[15px] text-white/70 font-light">
-          <span>© {currentYear} SPS Grupp. Kõikõigused kaitstud.</span>
+          <span>© {currentYear} SPS Grupp. Kõik õigused kaitstud.</span>
           <div className="flex gap-5">
             <Link href="/privaatsus" className="text-white/70 no-underline hover:text-[#85cbe9]">Privaatsus</Link>
             <Link href="/kasutustingimused" className="text-white/70 no-underline hover:text-[#85cbe9]">Kasutustingimused</Link>

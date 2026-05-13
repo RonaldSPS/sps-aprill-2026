@@ -54,7 +54,7 @@ const Hero = () => (
       </div>
       <div className="order-1 md:order-2 relative">
         <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-          <Image src="/FrontHeroCar.jpg" alt="Hero" fill className="object-cover" style={{ color: "#2d3748" }} />
+          <Image src="/FrontHeroCar.jpg" alt="Koristusfirma SPS Grupp" fill className="object-cover" style={{ color: "#2d3748" }} />
         </div>
         {/* Floating stats card */}
         <div className="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-gray-100">

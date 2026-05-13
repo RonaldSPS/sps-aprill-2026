@@ -11,20 +11,22 @@ export default function TwoToneHeading({ text, className = "" }: TwoToneHeadingP
 
   return (
     <h2 className={`section-title ${className}`}>
-      <div style={{ 
+      <span style={{ 
         fontFamily: 'Ubuntu', 
         fontWeight: 400, 
-        color: 'var(--navy)' 
+        color: 'var(--navy)',
+        display: 'block'
       }}>
         {firstHalf}
-      </div>
-      <div style={{ 
+      </span>
+      <span style={{ 
         fontFamily: 'Ubuntu', 
         fontWeight: 600, 
-        color: 'var(--sky-text)' 
+        color: 'var(--sky-text)',
+        display: 'block'
       }}>
         {secondHalf}
-      </div>
+      </span>
     </h2>
   );
 }

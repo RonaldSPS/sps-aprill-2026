@@ -223,7 +223,7 @@ export default function Trust() {
             <p className="text-[15px] text-[#2d7a4f] font-medium mb-4">
               Kõik vahendid ja tarvikud on hinna sees.
             </p>
-            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#00abff] text-[15px] font-medium no-underline">
+            <Link href="#pakkumine" aria-label="Vaata lähemalt regulaarse koristusteenuse kohta" className="inline-flex items-center gap-1.5 text-[#0078b5] text-[15px] font-medium no-underline">
               Vaata lähemalt <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -259,7 +259,7 @@ export default function Trust() {
             <p className="text-[15px] text-[#2d7a4f] font-medium mb-4">
               Kiirreageerimine 24/7 ootamatute olukordade jaoks.
             </p>
-            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#00abff] text-[15px] font-medium no-underline">
+            <Link href="#pakkumine" aria-label="Vaata lähemalt puhastusteenuste ja eritööde kohta" className="inline-flex items-center gap-1.5 text-[#0078b5] text-[15px] font-medium no-underline">
               Vaata lähemalt <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -295,7 +295,7 @@ export default function Trust() {
             <p className="text-[15px] text-[#2d7a4f] font-medium mb-4">
               Üks leping, mis katab kõik hooajad ja vajadused.
             </p>
-            <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#00abff] text-[15px] font-medium no-underline">
+            <Link href="#pakkumine" aria-label="Vaata lähemalt välikoristuse ja territooriumi hoolduse kohta" className="inline-flex items-center gap-1.5 text-[#0078b5] text-[15px] font-medium no-underline">
               Vaata lähemalt <span aria-hidden="true">→</span>
             </Link>
           </div>

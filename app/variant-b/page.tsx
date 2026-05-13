@@ -85,7 +85,7 @@ const Hero = () => (
       
       <div className="relative">
         <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
-          <Image src="/FrontHeroCar.jpg" alt="Hero" fill className="object-cover" style={{ color: "#2d3748" }} />
+          <Image src="/FrontHeroCar.jpg" alt="Koristusfirma SPS Grupp" fill className="object-cover" style={{ color: "#2d3748" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#17345a]/80 via-transparent to-transparent"></div>
         </div>
         
