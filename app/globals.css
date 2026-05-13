@@ -1,22 +1,5 @@
 @import "tailwindcss";
 
-/* Chillax Font Face */
-@font-face {
-  font-family: 'Chillax';
-  src: url('/Font/Chillax-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Chillax';
-  src: url('/Font/Chillax-Semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
 @layer utilities {
   .text-custom-gray {
     color: #2f353f;
@@ -388,7 +371,7 @@ body {
 }
 
 .section-title span {
-  font-family: 'Chillax', system-ui, sans-serif;
+  font-family: 'Ubuntu', system-ui, sans-serif;
 }
 
 .section-intro {

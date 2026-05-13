@@ -12,14 +12,14 @@ export default function TwoToneHeading({ text, className = "" }: TwoToneHeadingP
   return (
     <div className={`section-title ${className}`}>
       <div style={{ 
-        fontFamily: 'Chillax', 
+        fontFamily: 'Ubuntu', 
         fontWeight: 400, 
         color: 'var(--navy)' 
       }}>
         {firstHalf}
       </div>
       <div style={{ 
-        fontFamily: 'Chillax', 
+        fontFamily: 'Ubuntu', 
         fontWeight: 600, 
         color: 'var(--sky)' 
       }}>
