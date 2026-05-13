@@ -151,10 +151,10 @@ export default function Navbar() {
                   >
                     {megaMenuData.columns.map((col, colIdx) => (
                       <div key={colIdx} className={col.highlighted ? "bg-[#e8ebef] rounded-lg p-4 -m-4" : ""}>
-                        <h3 className="text-[14px] font-bold text-[#17345a] mb-3 flex items-center gap-2">
+                        <div className="text-[14px] font-bold text-[#17345a] mb-3 flex items-center gap-2">
                           {col.icon && <span className="w-5 h-5">{col.icon}</span>}
                           {col.title}
-                        </h3>
+                        </div>
                         {col.items && (
 <ul className="flex flex-col gap-1">
                             {col.items.map((item, itemIdx) => (
@@ -236,7 +236,7 @@ export default function Navbar() {
                 style={{ width: "auto", height: "32px" }}
               />
             </Link>
-            <button onClick={() => setMobileMenuOpen(false)} className="p-2">
+            <button onClick={() => setMobileMenuOpen(false)} className="p-2" aria-label="Sulge menüü">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17345a" strokeWidth="2">
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />
@@ -251,14 +251,14 @@ export default function Navbar() {
                 <div key={link.href} className="mb-4">
                   {index === 0 ? (
                     <div>
-                      <h3 className="text-lg font-bold text-[#17345a] mb-4">{link.label}</h3>
+                      <div className="text-lg font-bold text-[#17345a] mb-4">{link.label}</div>
                       <div className="grid grid-cols-1 gap-4">
                         {megaMenuData.columns.map((col, colIdx) => (
                           <div key={colIdx}>
-                            <h4 className="text-base font-semibold text-[#17345a] mb-2 flex items-center gap-2">
+                            <div className="text-base font-semibold text-[#17345a] mb-2 flex items-center gap-2">
                               {col.icon && <span className="w-4 h-4">{col.icon}</span>}
                               {col.title}
-                            </h4>
+                            </div>
                             <ul className="flex flex-col gap-1">
                               {col.items && col.items.map((item, itemIdx) => (
                                 <li key={itemIdx}>

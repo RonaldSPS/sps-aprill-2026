@@ -53,11 +53,11 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <div className="text-[14px] font-medium text-[#17345a]">{t.author}</div>
-                  <div className="text-[12px] text-[#8896a6]">{t.location}</div>
+                  <div className="text-[14px] text-[#5a6474]">{t.location}</div>
                 </div>
               </div>
               <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[13px] font-medium no-underline mt-4 transition-all hover:text-[#17345a] hover:gap-2.5">
-                Soovid sama tulemust? Küsi pakkumist →
+                Soovid sama tulemust? Küsi pakkumist <span aria-hidden="true">→</span>
               </Link>
             </div>
           ))}

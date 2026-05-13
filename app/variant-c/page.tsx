@@ -121,12 +121,12 @@ const Hero = () => (
 const Logos = () => (
   <section id="kliendid" className="py-20 bg-[#0a1628] border-y border-[#17345a]/30">
     <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
-      <p className="text-sm text-white/40 uppercase tracking-wider">Premium partnerid</p>
+      <p className="text-sm text-white/50 uppercase tracking-wider">Premium partnerid</p>
     </div>
     <div className="overflow-hidden">
       <div className="flex gap-20 opacity-40">
         {[...Array(10)].map((_, i) => (
-          <div key={i} className="flex-shrink-0 text-2xl font-bold text-white/30">PARTNER {i + 1}</div>
+          <div key={i} className="flex-shrink-0 text-2xl font-bold text-white/50">PARTNER {i + 1}</div>
         ))}
       </div>
     </div>
@@ -159,7 +159,7 @@ const Services = () => {
                 <h3 className="text-2xl font-bold text-white mb-3">{s.title}</h3>
                 <p className="text-white/60 leading-relaxed mb-6">{s.desc}</p>
                 <Link href="#pakkumine" className="inline-flex items-center gap-2 text-[#85cbe9] font-semibold hover:text-white transition-colors">
-                  Loe lähemalt <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  Loe lähemalt <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </Link>
               </div>
             </div>
@@ -192,7 +192,7 @@ const Testimonials = () => (
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#17345a] to-[#85cbe9] flex items-center justify-center text-white font-bold">{t.author[0]}</div>
               <div>
                 <div className="font-semibold text-white">{t.author}</div>
-                <div className="text-sm text-white/40">{t.role}</div>
+                <div className="text-sm text-white/50">{t.role}</div>
               </div>
             </div>
           </div>
@@ -366,11 +366,11 @@ const Footer = () => (
             </div>
             <span className="text-2xl font-bold">SPS Grupp</span>
           </div>
-          <p className="text-white/40 leading-relaxed">Premium koristusteenus ärikliendile.</p>
+          <p className="text-white/50 leading-relaxed">Premium koristusteenus ärikliendile.</p>
         </div>
         <div>
           <h4 className="font-semibold mb-6">Teenused</h4>
-          <ul className="space-y-3 text-white/40">
+          <ul className="space-y-3 text-white/50">
             <li><Link href="#" className="hover:text-[#85cbe9] transition-colors">Kontori koristus</Link></li>
             <li><Link href="#" className="hover:text-[#85cbe9] transition-colors">Kaubanduspinnad</Link></li>
             <li><Link href="#" className="hover:text-[#85cbe9] transition-colors">Tootmishooned</Link></li>
@@ -378,7 +378,7 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-semibold mb-6">Ettevõte</h4>
-          <ul className="space-y-3 text-white/40">
+          <ul className="space-y-3 text-white/50">
             <li><Link href="#" className="hover:text-[#85cbe9] transition-colors">Meist</Link></li>
             <li><Link href="#" className="hover:text-[#85cbe9] transition-colors">Tule tööle</Link></li>
             <li><Link href="#" className="hover:text-[#85cbe9] transition-colors">Kontakt</Link></li>
@@ -386,7 +386,7 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-semibold mb-6">Kontakt</h4>
-          <ul className="space-y-3 text-white/40">
+          <ul className="space-y-3 text-white/50">
             <li>Mustamäe tee 46, Tallinn</li>
             <li><a href="tel:6623328" className="hover:text-[#85cbe9] transition-colors">+372 662 3328</a></li>
             <li><a href="mailto:info@spsgrupp.ee" className="hover:text-[#85cbe9] transition-colors">info@spsgrupp.ee</a></li>

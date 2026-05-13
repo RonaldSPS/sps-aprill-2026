@@ -25,7 +25,7 @@ export default function ContactForm() {
         <div className="form-card">
             <div className="section-tag mx-auto w-fit">Küsi pakkumist</div>
             <TwoToneHeading text="Aitame leida optimaalse lahenduse teie koristusvajadustele" className="mb-6 text-center" />
-            <p className="text-[14px] text-[#8896a6] mb-6 font-light text-center">
+            <p className="text-[14px] text-[#5a6474] mb-6 font-light text-center">
               Täitke vorm ja meie spetsialist võtab teiega ühendust 24 tunni jooksul.
             </p>
 
@@ -97,7 +97,7 @@ export default function ContactForm() {
                 <span className="relative z-10">Saada päring</span>
               </button>
 
-              <p className="text-center text-[13px] text-[#8896a6] mt-3 flex items-center justify-center gap-1.5 font-light">
+              <p className="text-center text-[13px] text-[#5a6474] mt-3 flex items-center justify-center gap-1.5 font-light">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2d9e6b" strokeWidth="2">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                   <polyline points="22 4 12 14.01 9 11.01" />

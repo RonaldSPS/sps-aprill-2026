@@ -311,7 +311,7 @@ export default function KontoriKoristus() {
                       <div className={`text-[26px] font-bold mb-1 ${item.highlight ? "text-white" : "text-[#17345a]"}`}>
                         {item.price}
                       </div>
-                      <div className={`text-[12px] mb-2 ${item.highlight ? "text-white/70" : "text-[#8896a6]"}`}>
+                      <div className={`text-[12px] mb-2 ${item.highlight ? "text-white/70" : "text-[#5a6474]"}`}>
                         {item.period}
                       </div>
                       <div className={`text-[12px] ${item.highlight ? "text-white/70" : "text-[#5a6474]"}`}>

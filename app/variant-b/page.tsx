@@ -165,7 +165,7 @@ const Services = () => {
                 <h3 className="text-2xl font-bold text-[#17345a] mb-3">{s.title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">{s.desc}</p>
                 <Link href="#pakkumine" className="inline-flex items-center gap-2 text-white bg-gradient-to-r from-[#17345a] to-[#5ab5da] px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
-                  Loe lähemalt <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  Loe lähemalt <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </Link>
               </div>
             </div>

@@ -152,6 +152,7 @@ export default function Footer() {
               className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-[#85cbe9] transition-colors no-underline"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="SPS Grupp Facebook"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#85cbe9]">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -161,14 +162,14 @@ export default function Footer() {
 
           {/* Column 2: Teenused with mega menu */}
           <div>
-            <h4 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
+            <h2 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
               {megaMenuData.columns[0].icon && (
                 <span className="w-5 h-5 text-[#85cbe9]">
                   {megaMenuData.columns[0].icon}
                 </span>
               )}
               {megaMenuData.columns[0].title}
-            </h4>
+            </h2>
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[0].items.map((item, idx) => (
                 <li key={idx}>
@@ -191,14 +192,14 @@ export default function Footer() {
 
           {/* Column 3: Sisepuhastus */}
           <div>
-            <h4 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
+            <h2 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
               {megaMenuData.columns[1].icon && (
                 <span className="w-5 h-5 text-[#85cbe9]">
                   {megaMenuData.columns[1].icon}
                 </span>
               )}
               {megaMenuData.columns[1].title}
-            </h4>
+            </h2>
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[1].items.map((item, idx) => (
                 <li key={idx}>
@@ -212,14 +213,14 @@ export default function Footer() {
 
           {/* Column 4: Välikoristus */}
           <div>
-            <h4 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
+            <h2 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
               {megaMenuData.columns[2].icon && (
                 <span className="w-5 h-5 text-[#85cbe9]">
                   {megaMenuData.columns[2].icon}
                 </span>
               )}
               {megaMenuData.columns[2].title}
-            </h4>
+            </h2>
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[2].items.map((item, idx) => (
                 <li key={idx}>
@@ -233,14 +234,14 @@ export default function Footer() {
 
           {/* Column 5: Remonditeenused */}
           <div>
-            <h4 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
+            <h2 className="text-white text-[14px] font-bold mb-3 flex items-center gap-2">
               {megaMenuData.columns[3].icon && (
                 <span className="w-5 h-5 text-[#85cbe9]">
                   {megaMenuData.columns[3].icon}
                 </span>
               )}
               {megaMenuData.columns[3].title}
-            </h4>
+            </h2>
             <ul className="flex flex-col gap-1 list-none">
               {megaMenuData.columns[3].items.map((item, idx) => (
                 <li key={idx}>
@@ -254,11 +255,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="flex justify-between items-center mt-5 flex-wrap gap-2.5 text-[13px] text-white/30 font-light">
+        <div className="flex justify-between items-center mt-5 flex-wrap gap-2.5 text-[13px] text-white/50 font-light">
           <span>© {currentYear} SPS Grupp. Kõikõigused kaitstud.</span>
           <div className="flex gap-5">
-            <Link href="#" className="text-white/30 no-underline hover:text-white/50">Privaatsus</Link>
-            <Link href="#" className="text-white/30 no-underline hover:text-white/50">Kasutustingimused</Link>
+            <span className="text-white/50">Privaatsus</span>
+            <span className="text-white/50">Kasutustingimused</span>
           </div>
         </div>
       </div>

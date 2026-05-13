@@ -10,7 +10,7 @@ export default function TwoToneHeading({ text, className = "" }: TwoToneHeadingP
   const secondHalf = words.slice(midpoint).join(' ');
 
   return (
-    <div className={`section-title ${className}`}>
+    <h2 className={`section-title ${className}`}>
       <div style={{ 
         fontFamily: 'Ubuntu', 
         fontWeight: 400, 
@@ -25,6 +25,6 @@ export default function TwoToneHeading({ text, className = "" }: TwoToneHeadingP
       }}>
         {secondHalf}
       </div>
-    </div>
+    </h2>
   );
 }

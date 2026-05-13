@@ -18,13 +18,13 @@ export default function Hinnakalkulaator() {
       transition={{ duration: 0.45 }}
       className="rounded-[32px] bg-[#fafafa] p-8 md:p-10 text-[#2f353f] border border-[#eceef1]"
     >
-      <p className="uppercase tracking-[0.25em] text-[15px] text-[#8896a6] mb-6">
+      <p className="uppercase tracking-[0.25em] text-[15px] text-[#5a6474] mb-6">
         Hinnakalkulaator
       </p>
 
       <div className="flex items-end gap-3 mb-3">
         <span className="text-6xl md:text-7xl leading-none font-semibold text-[#17345a]">{price}€</span>
-        <span className="text-xl text-[#8896a6] pb-2">/ kuu</span>
+        <span className="text-xl text-[#5a6474] pb-2">/ kuu</span>
       </div>
 
       <p className="text-[15px] text-[#5a6474] mb-10">
@@ -46,7 +46,7 @@ export default function Hinnakalkulaator() {
           onChange={(e) => setArea(Number(e.target.value))}
           className="w-full accent-[#85cbe9] cursor-pointer"
         />
-        <div className="flex justify-between mt-3 font-mono text-[15px] text-[#8896a6]">
+        <div className="flex justify-between mt-3 font-mono text-[15px] text-[#5a6474]">
           <span>1 000</span>
           <span>3 000</span>
           <span>5 000</span>

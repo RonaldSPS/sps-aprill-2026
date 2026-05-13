@@ -101,7 +101,7 @@ export default function Trust() {
                   </div>
                   <div>
                     <div className="text-[13px] font-bold text-[#17345a] mb-0.5">{badge.title}</div>
-                    <div className="text-[11px] text-[#8896a6]">{badge.subtitle}</div>
+                    <div className="text-[13px] text-[#5a6474]">{badge.subtitle}</div>
                   </div>
                 </div>
               ))}

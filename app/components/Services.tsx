@@ -141,7 +141,7 @@ export default function Services() {
               Kõik vahendid ja tarvikud on hinna sees.
             </p>
             <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[14px] font-medium no-underline">
-              Vaata lähemalt →
+              Vaata lähemalt <span aria-hidden="true">→</span>
             </Link>
           </div>
 
@@ -176,7 +176,7 @@ export default function Services() {
               Kiirreageerimine 24/7 ootamatute olukordade jaoks.
             </p>
             <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[14px] font-medium no-underline">
-              Vaata lähemalt →
+              Vaata lähemalt <span aria-hidden="true">→</span>
             </Link>
           </div>
 
@@ -211,7 +211,7 @@ export default function Services() {
               Üks leping, mis katab kõik hooajad ja vajadused.
             </p>
             <Link href="#pakkumine" className="inline-flex items-center gap-1.5 text-[#5ab5da] text-[14px] font-medium no-underline">
-              Vaata lähemalt →
+              Vaata lähemalt <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
