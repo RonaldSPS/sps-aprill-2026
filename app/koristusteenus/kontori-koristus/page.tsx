@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Testimonials from "../components/Testimonials";
-import FAQ from "../components/FAQ";
-import FooterCTA from "../components/FooterCTA";
-import ContactForm from "../components/ContactForm";
-import ScrollAnimation from "../components/ScrollAnimation";
-import Hinnakalkulaator from "../components/Hinnakalkulaator";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Testimonials from "../../components/Testimonials";
+import FAQ from "../../components/FAQ";
+import FooterCTA from "../../components/FooterCTA";
+import ContactForm from "../../components/ContactForm";
+import ScrollAnimation from "../../components/ScrollAnimation";
+import Hinnakalkulaator from "../../components/Hinnakalkulaator";
 
 export default function KontoriKoristus() {
   return (

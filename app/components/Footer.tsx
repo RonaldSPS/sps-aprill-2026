@@ -20,7 +20,7 @@ const megaMenuData = {
         </svg>
       ),
       items: [
-        { label: "Kontori koristus", href: "/kontorikoristus" },
+        { label: "Kontori koristus", href: "/koristusteenus/kontori-koristus" },
         { label: "Kaubanduspindade koristus", href: "/kaubanduspindade-koristus" },
         { label: "Tootmishoonete koristus", href: "/tootmishoonete-koristus" },
       ],
